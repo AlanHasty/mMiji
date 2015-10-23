@@ -12,3 +12,4 @@
 { "duration": 5, "gear": "S17", "finishTime": 39, "description": "Spin" },
 { "duration": 15, "gear": "B17", "finishTime": 54 , "description": "** 45 sec 100 RPM/15 sec max, S17 30 sec x10" },
 { "duration": 6, "gear": "S17", "finishTime": 60, "description": "Cool Down" } ] } 
+
