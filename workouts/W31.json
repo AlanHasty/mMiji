@@ -1,0 +1,13 @@
+{ "workoutNum": 31, "efforts": [
+{ "duration": 8.0, "finishTime": 8.0, "gear": "S17", "description": "Warm Up" } ,
+{ "duration": 5.0, "finishTime": 13.0, "isplit": [{ "iname":"on", "itime":20}, {"iname":"off", "itime":20 }], "gear": "B17", "description": "20 sec on/20 sec off" } ,
+{ "duration": 3.0, "finishTime": 16.0, "isplit": [{ "iname":"on", "itime":20}, {"iname":"off", "itime":20 }], "gear": "B16", "description": "20 sec on/20 sec off" } ,
+{ "duration": 4.0, "finishTime": 20.0, "isplit": [{ "iname":"on", "itime":20}, {"iname":"off", "itime":20 }], "gear": "B17", "description": "20 sec on/20 sec off" } ,
+{ "duration": 4.0, "finishTime": 24.0, "gear": "S17", "description": "Spin" } ,
+{ "duration": 5.0, "finishTime": 29.0, "isplit": [{ "iname":"on", "itime":20}, {"iname":"off", "itime":20 }], "gear": "B17", "description": "20 sec on/20 sec off" } ,
+{ "duration": 3.0, "finishTime": 32.0, "isplit": [{ "iname":"on", "itime":20}, {"iname":"off", "itime":20 }], "gear": "B16", "description": "20 sec on/20 sec off" } ,
+{ "duration": 4.0, "finishTime": 36.0, "isplit": [{ "iname":"on", "itime":20}, {"iname":"off", "itime":20 }], "gear": "B17", "description": "20 sec on/20 sec off" } ,
+{ "duration": 4.0, "finishTime": 40.0, "gear": "S17", "description": "Spin" } ,
+{ "duration": 10.0, "finishTime": 50.0, "isplit": [{ "iname":"on", "itime":30}, {"iname":"off", "itime":30 }], "gear": "S15", "description": "30 sec on/30 sec off" } ,
+{ "duration": 10.0, "finishTime": 60.0, "gear": "S17", "description": "Cool Down" } 
+] }

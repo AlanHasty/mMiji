@@ -1,0 +1,20 @@
+{ "workoutNum": 13, "efforts": [
+{ "duration": 6.0, "finishTime": 6.0, "gear": "S18", "description": "Warm Up" } ,
+{ "duration": 4.0, "finishTime": 10.0, "gear": "S17", "description": "100 RPM" } ,
+{ "duration": 3.0, "finishTime": 13.0, "gear": "S16", "description": "100 RPM" } ,
+{ "duration": 2.0, "finishTime": 15.0, "gear": "S15", "description": "100 RPM" } ,
+{ "duration": 1.0, "finishTime": 16.0, "gear": "S14", "description": "100 RPM" } ,
+{ "duration": 2.0, "finishTime": 18.0, "gear": "S15", "description": "100 RPM" } ,
+{ "duration": 3.0, "finishTime": 21.0, "gear": "S16", "description": "100 RPM" } ,
+{ "duration": 4.0, "finishTime": 25.0, "gear": "S17", "description": "100 RPM" } ,
+{ "duration": 5.0, "finishTime": 30.0, "gear": "S18", "description": "Spin" } ,
+{ "duration": 3.0, "finishTime": 33.0, "isplit": [{ "iname":"on", "itime":20}, {"iname":"off", "itime":20} ], "gear": "S18", "description": "20 sec on/20 sec off" } ,
+{ "duration": 3.0, "finishTime": 36.0, "gear": "S16", "description": "100 RPM" } ,
+{ "duration": 3.0, "finishTime": 39.0, "gear": "B17", "description": "100 RPM" } ,
+{ "duration": 3.0, "finishTime": 42.0, "gear": "S18", "description": "100 RPM" } ,
+{ "duration": 3.0, "finishTime": 45.0, "isplit": [{ "iname":"on", "itime":20}, {"iname":"off", "itime":20} ], "gear": "S18", "description": "20 sec on/20 sec off" } ,
+{ "duration": 3.0, "finishTime": 48.0, "gear": "S16", "description": "100 RPM" } ,
+{ "duration": 3.0, "finishTime": 51.0, "gear": "B17", "description": "100 RPM" } ,
+{ "duration": 3.0, "finishTime": 54.0, "gear": "S18", "description": "100 RPM" } ,
+{ "duration": 6.0, "finishTime": 60.0, "gear": "S18", "description": "Cool Down" } 
+] }

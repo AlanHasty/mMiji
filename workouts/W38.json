@@ -1,0 +1,14 @@
+{ "workoutNum": 38, "efforts": [
+{ "duration": 10, "gear": "S17", "finishTime": 10, "description": "Warm Up" },
+{ "duration": 4, "gear": "B17", "finishTime": 14, "description": "100+RPM" },
+{ "duration": 2, "gear": "S17", "finishTime": 16, "description": "Spin" },
+{ "duration": 3, "gear": "B16", "finishTime": 19, "description": "100+ RPM" },
+{ "duration": 2, "gear": "S17", "finishTime": 21, "description": "Spin" },
+{ "duration": 2, "gear": "B15", "finishTime": 23, "description": "100+ RPM" },
+{ "duration": 2, "gear": "S17", "finishTime": 25, "description": "Spin" },
+{ "duration": 1, "gear": "B14", "finishTime": 26, "description": "100+ RPM" },
+{ "duration": 4, "gear": "S17", "finishTime": 30, "description": "Spin" },
+{ "duration": 4, "gear": "B15", "finishTime": 34, "description": "100+ RPM" },
+{ "duration": 5, "gear": "S17", "finishTime": 39, "description": "Spin" },
+{ "duration": 15, "gear": "B17", "finishTime": 54 , "description": "** 45 sec 100 RPM/15 sec max, S17 30 sec x10" },
+{ "duration": 6, "gear": "S17", "finishTime": 60, "description": "Cool Down" } ] } 

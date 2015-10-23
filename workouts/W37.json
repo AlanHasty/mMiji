@@ -1,0 +1,16 @@
+{ "workoutNum": 37, "efforts": [
+{ "duration": 5, "gear": "S17", "finishTime": 5, "description": "Warm Up" },
+{ "duration": 5, "gear": "B16", "finishTime": 10, "description":  "15 sec on/15 sec off,20 sec on/20 sec off, 25 sec on/25 sec off,30 sec on/30 sec off,25 sec on/25 sec off,20 sec on/20 sec off,15 sec on/15 sec off"},
+{ "duration": 5, "gear": "S17", "finishTime": 15, "description": "Spin" },
+{ "duration": 5, "gear": "B16", "finishTime": 20, "description":  "15 sec on/15 sec off,20 sec on/20 sec off, 25 sec on/25 sec off,30 sec on/30 sec off,25 sec on/25 sec off,20 sec on/20 sec off,15 sec on/15 sec off"},
+{ "duration": 5, "gear": "S17", "finishTime": 25, "description": "Spin" },
+{ "duration": 5, "gear": "B16", "finishTime": 30, "description":  "15 sec on/15 sec off,20 sec on/20 sec off, 25 sec on/25 sec off,30 sec on/30 sec off,25 sec on/25 sec off,20 sec on/20 sec off,15 sec on/15 sec off"},
+{ "duration": 5, "gear": "S17", "finishTime": 35, "description": "Spin" },
+{ "duration": 3, "gear": "B17", "finishTime": 38, "description": "100+ RPM" },
+{ "duration": 3, "gear": "B16", "finishTime": 41, "description": "100+ RPM" },
+{ "duration": 3, "gear": "B15", "finishTime": 44, "description": "100+ RPM" },
+{ "duration": 2, "gear": "B14", "finishTime": 46, "description": "100+ RPM" },
+{ "duration": 3, "gear": "B15", "finishTime": 49, "description": "100+ RPM" },
+{ "duration": 3, "gear": "B16", "finishTime": 52, "description": "100+ RPM" },
+{ "duration": 3, "gear": "B17", "finishTime": 55, "description": "100+ RPM" },
+{ "duration": 5, "gear": "S17", "finishTime": 60, "description": "Cool Down" }  ] }
