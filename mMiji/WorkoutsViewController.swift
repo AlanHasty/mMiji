@@ -32,11 +32,7 @@ class WorkoutsViewController: UITableViewController {
  
         do {
             let dirContents = try fm.contentsOfDirectoryAtPath(path)
-            //let workoutList = dirContents.filter(){ $0.pathExtension == "json"}.map( $0.lastPathComponent)
             workoutList = dirContents.filter() {$0.containsString("json")}
-            for item in workoutList {
-            print("\(item)")
-            }
         }
         catch {
             print("This is a bad path \(path)")
