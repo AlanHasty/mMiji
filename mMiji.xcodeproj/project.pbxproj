@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E729B3341BE0E6CF0083D163 /* CSCDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729B3331BE0E6CF0083D163 /* CSCDevicesViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E729B3361BE0E7BD0083D163 /* CSCDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729B3351BE0E7BD0083D163 /* CSCDevice.swift */; settings = {ASSET_TAGS = (); }; };
+		E729B3381BE0E9B80083D163 /* CSCDeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729B3371BE0E9B80083D163 /* CSCDeviceData.swift */; settings = {ASSET_TAGS = (); }; };
+		E7637E601BE78D4300A04107 /* CSCDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E5F1BE78D4300A04107 /* CSCDeviceCell.swift */; settings = {ASSET_TAGS = (); }; };
+		E7637E611BE78D4300A04107 /* CSCDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E5F1BE78D4300A04107 /* CSCDeviceCell.swift */; settings = {ASSET_TAGS = (); }; };
+		E7637E621BE78D4300A04107 /* CSCDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E5F1BE78D4300A04107 /* CSCDeviceCell.swift */; settings = {ASSET_TAGS = (); }; };
+		E7637E641BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E7637E651BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E7637E661BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		E79534621BDA499A00C1C93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79534611BDA499A00C1C93C /* AppDelegate.swift */; };
 		E79534641BDA499A00C1C93C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79534631BDA499A00C1C93C /* ViewController.swift */; };
 		E79534671BDA499A00C1C93C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79534651BDA499A00C1C93C /* Main.storyboard */; };
@@ -148,6 +157,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E729B3331BE0E6CF0083D163 /* CSCDevicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCDevicesViewController.swift; sourceTree = "<group>"; };
+		E729B3351BE0E7BD0083D163 /* CSCDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCDevice.swift; sourceTree = "<group>"; };
+		E729B3371BE0E9B80083D163 /* CSCDeviceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCDeviceData.swift; sourceTree = "<group>"; };
+		E7637E5F1BE78D4300A04107 /* CSCDeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCDeviceCell.swift; sourceTree = "<group>"; };
+		E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		E795345E1BDA499A00C1C93C /* mMiji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mMiji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79534611BDA499A00C1C93C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E79534631BDA499A00C1C93C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +270,11 @@
 				E79534681BDA499A00C1C93C /* Assets.xcassets */,
 				E795346A1BDA499A00C1C93C /* LaunchScreen.storyboard */,
 				E795346D1BDA499A00C1C93C /* Info.plist */,
+				E729B3331BE0E6CF0083D163 /* CSCDevicesViewController.swift */,
+				E729B3351BE0E7BD0083D163 /* CSCDevice.swift */,
+				E729B3371BE0E9B80083D163 /* CSCDeviceData.swift */,
+				E7637E5F1BE78D4300A04107 /* CSCDeviceCell.swift */,
+				E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */,
 			);
 			path = mMiji;
 			sourceTree = "<group>";
@@ -568,7 +587,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79534641BDA499A00C1C93C /* ViewController.swift in Sources */,
+				E7637E641BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */,
+				E729B3341BE0E6CF0083D163 /* CSCDevicesViewController.swift in Sources */,
+				E729B3381BE0E9B80083D163 /* CSCDeviceData.swift in Sources */,
 				E79534621BDA499A00C1C93C /* AppDelegate.swift in Sources */,
+				E7637E601BE78D4300A04107 /* CSCDeviceCell.swift in Sources */,
+				E729B3361BE0E7BD0083D163 /* CSCDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +600,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7637E611BE78D4300A04107 /* CSCDeviceCell.swift in Sources */,
 				E79534771BDA499A00C1C93C /* mMijiTests.swift in Sources */,
+				E7637E651BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,7 +610,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7637E621BE78D4300A04107 /* CSCDeviceCell.swift in Sources */,
 				E79534821BDA499A00C1C93C /* mMijiUITests.swift in Sources */,
+				E7637E661BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,7 +687,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -698,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -795,6 +823,7 @@
 				E79534881BDA499A00C1C93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E79534891BDA499A00C1C93C /* Build configuration list for PBXNativeTarget "mMijiTests" */ = {
 			isa = XCConfigurationList;
@@ -803,6 +832,7 @@
 				E795348B1BDA499A00C1C93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E795348C1BDA499A00C1C93C /* Build configuration list for PBXNativeTarget "mMijiUITests" */ = {
 			isa = XCConfigurationList;
@@ -811,6 +841,7 @@
 				E795348E1BDA499A00C1C93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

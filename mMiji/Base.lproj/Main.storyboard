@@ -5,40 +5,31 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--CSC Selection-->
-        <scene sceneID="wjX-TF-N4c">
-            <objects>
-                <viewController title="CSC Selection" id="BE8-zF-KT0" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FhW-z4-R81"/>
-                        <viewControllerLayoutGuide type="bottom" id="CRb-t0-q1Q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xpG-78-OHB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="CSC Selection" id="WFt-eR-8f1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K8u-N9-Yyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="422" y="-209"/>
-        </scene>
         <!--Workouts-->
         <scene sceneID="T2j-Uv-dv3">
             <objects>
-                <tableViewController title="Workouts" id="9dA-sf-Vip" sceneMemberID="viewController">
+                <tableViewController title="Workouts" id="9dA-sf-Vip" customClass="WorkoutsViewController" customModule="mMiji" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Lj-vb-UCo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.20291601379999999" green="0.32064824730000002" blue="0.92108950410000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WRW-dF-2DC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WorkoutCell" textLabel="tyC-kq-xRQ" style="IBUITableViewCellStyleDefault" id="WRW-dF-2DC">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WRW-dF-2DC" id="cQ5-5v-nK8">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tyC-kq-xRQ">
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -47,7 +38,7 @@
                             <outlet property="delegate" destination="9dA-sf-Vip" id="Pq1-SH-lHW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="68S-gI-71D"/>
+                    <navigationItem key="navigationItem" id="68S-gI-71D" userLabel="Workouts"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szR-3c-g0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,7 +54,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BE8-zF-KT0" kind="relationship" relationship="viewControllers" id="VBi-BL-0eQ"/>
                         <segue destination="ygu-ay-nMV" kind="relationship" relationship="viewControllers" id="WdZ-Ws-GIf"/>
                     </connections>
                 </tabBarController>
@@ -71,11 +61,11 @@
             </objects>
             <point key="canvasLocation" x="-398" y="122"/>
         </scene>
-        <!--Item-->
+        <!--Workouts-->
         <scene sceneID="hlW-VK-Unf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ygu-ay-nMV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MD0-fp-JrZ"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="5Stars" id="MD0-fp-JrZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fY9-XX-8H3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -91,4 +81,7 @@
             <point key="canvasLocation" x="422" y="471"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="5Stars" width="81" height="15"/>
+    </resources>
 </document>
