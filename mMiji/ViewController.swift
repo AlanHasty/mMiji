@@ -8,19 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITableViewDataSource,UITableViewDelegate {
+class ViewController: UIViewController  {
 
-    @IBOutlet var tableView: UITableView!
-    
-    var cscDevices: [CSCDevice] = cscData
-    let cscDeviceCell = "CSCDeivceCell"
+ 
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        tableView.delegate = self
-        tableView.dataSource = self
+
         
     }
 
@@ -30,30 +27,6 @@ class ViewController: UIViewController , UITableViewDataSource,UITableViewDelega
     }
 
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cscDevices.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cscDeviceCell, forIndexPath: indexPath) as! CSCDeviceCell
-        
-        let row = indexPath.row
-        let device = cscDevices[row]
-        
-        cell.name.text = device.name
-        cell.status.text = device.status
-        cell.macAddress.text = device.macAddress
-        
-        //cell?.textLabel!.text = cscDevices[row].name
-        //cell?.detailTextLabel!.text = cscDevices[row].macAddress
-        
-        return cell
-    }
 
 }
 
