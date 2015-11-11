@@ -22,7 +22,7 @@ class DevicesViewController: UIViewController, UITableViewDataSource,UITableView
         //tableView.delegate = self
         //tableView.dataSource = self
         
-        tableView.registerClass(CSCDeviceCell.self, forCellReuseIdentifier: cscCellID)
+        //tableView.registerClass(CSCDeviceCell.self, forCellReuseIdentifier: cscCellID)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,11 +50,13 @@ class DevicesViewController: UIViewController, UITableViewDataSource,UITableView
         let row = indexPath.row
         let device = cscDevices[row]
         
-        cell.textLabel?.text = device.macAddress
-//
+        cell.device = device  //
 //        cell.name.text = device.name
 //        cell.status.text = device.status
-//        cell.macAddress.text = device.macAddress
+//
+        
+        
+        //cell.macAddress.text = device.macAddress
         
         //cell?.textLabel!.text = cscDevices[row].name
         //cell?.detailTextLabel!.text = cscDevices[row].macAddress

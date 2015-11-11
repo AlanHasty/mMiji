@@ -23,9 +23,44 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jNd-wu-y3W">
                                 <rect key="frame" x="20" y="64" width="560" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CSCDeivceCell" id="FxU-Ak-iy2" customClass="CSCDeviceCell" customModule="mMiji" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FxU-Ak-iy2" id="f6Z-LP-boN">
+                                            <rect key="frame" x="0.0" y="0.0" width="527" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-ZJ-6CS">
+                                                    <rect key="frame" x="29" y="14" width="137" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="macAddressLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcp-UO-5GU">
+                                                    <rect key="frame" x="29" y="39" width="161" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="statusLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oN1-eu-VzZ">
+                                                    <rect key="frame" x="29" y="68" width="161" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="macAddressLabel" destination="Xcp-UO-5GU" id="CVe-Id-NPs"/>
+                                            <outlet property="nameLabel" destination="VGY-ZJ-6CS" id="3as-H8-dXk"/>
+                                            <outlet property="statusLabel" destination="oN1-eu-VzZ" id="WuV-eT-JCK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="H9r-gS-A8x" id="mpx-dc-JOf"/>
-                                    <outlet property="delegate" destination="H9r-gS-A8x" id="GeL-X7-SoB"/>
+                                    <outlet property="dataSource" destination="H9r-gS-A8x" id="wek-cV-vKI"/>
+                                    <outlet property="delegate" destination="H9r-gS-A8x" id="2LB-fG-kPJ"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -33,7 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7wI-k8-i2k"/>
                     <connections>
-                        <outlet property="tableView" destination="jNd-wu-y3W" id="qHE-0W-4mx"/>
+                        <outlet property="tableView" destination="jNd-wu-y3W" id="PfQ-r7-9JH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufw-aN-Gbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,8 +124,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ygu-ay-nMV" kind="relationship" relationship="viewControllers" id="WdZ-Ws-GIf"/>
                         <segue destination="Amp-o3-WOi" kind="relationship" relationship="viewControllers" id="8j1-21-lsV"/>
+                        <segue destination="ygu-ay-nMV" kind="relationship" relationship="viewControllers" id="WdZ-Ws-GIf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHY-h5-tf3" userLabel="First Responder" sceneMemberID="firstResponder"/>

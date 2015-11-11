@@ -2,7 +2,7 @@
 //  CSCDeviceCell.swift
 //  mMiji
 //
-//  Created by Alan Hasty on 11/2/15.
+//  Created by Alan Hasty on 11/11/15.
 //  Copyright © 2015 Alan Hasty. All rights reserved.
 //
 
@@ -10,15 +10,16 @@ import UIKit
 
 class CSCDeviceCell: UITableViewCell {
 
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var macAddress: UILabel!
-    @IBOutlet weak var status: UILabel!
+        
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var macAddressLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
     var device: CSCDevice! {
         didSet {
-            name.text = device.name
-            macAddress.text = "unknown"
-            status.text = "unknown"
+            nameLabel.text = device.name
+            macAddressLabel.text = device.macAddress
+            statusLabel.text = device.status
             //ratingImageView.image = imageForRating(player.rating)
         }
     }
@@ -31,6 +32,7 @@ class CSCDeviceCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+        // Configure the view for the selected state
     }
 
 }
