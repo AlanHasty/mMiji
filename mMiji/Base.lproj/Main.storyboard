@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IYl-UW-aXA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IYl-UW-aXA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--Devices View Controller-->
@@ -116,7 +116,18 @@
                             <outlet property="delegate" destination="9dA-sf-Vip" id="Pq1-SH-lHW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="68S-gI-71D" userLabel="Workouts"/>
+                    <navigationItem key="navigationItem" id="68S-gI-71D" userLabel="Workouts">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="YPh-Vp-ZUi">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pf4-JE-nvi">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get Ready"/>
+                                <connections>
+                                    <action selector="loadMeNow:" destination="9dA-sf-Vip" eventType="touchDown" id="A3l-bm-WFJ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szR-3c-g0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
