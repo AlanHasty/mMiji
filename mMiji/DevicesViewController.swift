@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MBProgressHUD
+
 
 class DevicesViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
 
