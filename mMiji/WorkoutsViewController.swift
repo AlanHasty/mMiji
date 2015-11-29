@@ -72,10 +72,11 @@ class WorkoutsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+
         var wkoutString:String = workoutList[indexPath.row]
         let removeRange = wkoutString.endIndex.advancedBy(-5)..<wkoutString.endIndex
-        
-        
+       
         wkoutString.removeRange(removeRange)
         tonightsWorkoutStr = wkoutString
         wkoutString.removeAtIndex(wkoutString.startIndex)
@@ -133,7 +134,7 @@ class WorkoutsViewController: UITableViewController {
         {
             let nav = segue.destinationViewController
             
-            let vc =   nav.childViewControllers[0]  as! TrainingViewController
+            let vc = nav.childViewControllers[0] as! TrainingViewController
             vc.tonightsWorkout = tonightsWorkout
             vc.tonightsWorkoutStr = tonightsWorkoutStr
         }
