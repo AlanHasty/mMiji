@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SFGaugeView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00FFD9DA0AEE77BF0981238D9D62FE00</key>
+		<key>2437D4FC38C9C8811DFCFDD774DFD95D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>32AB6C3DD7F91645454ED7293CB766C3</key>
+		<key>777D844B9EB90200F000B493331D9BBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5E70ED23AE2414474B759C7E044A260</key>
 		<dict>
 			<key>primary</key>
 			<true/>

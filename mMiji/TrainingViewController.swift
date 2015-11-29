@@ -8,8 +8,16 @@
 
 import UIKit
 
+
+
 class TrainingViewController: UIViewController {
 
+    var tonightsWorkoutStr = ""
+    var tonightsWorkout = 999
+    
+    var wkoutIndex = 0
+    @IBOutlet weak var WorkoutName: UILabel!
+    
     @IBOutlet weak var intervalTimerString: UILabel! 
     @IBOutlet weak var effortTimerString: UILabel!
     @IBOutlet weak var workoutTimerString: UILabel!
@@ -25,6 +33,9 @@ class TrainingViewController: UIViewController {
     var curEffortStruct =  Effort(duration: 2.0, finishTime: 58.0, gear:"B17", desc:"Test")
     var nextEffortStruct = Effort(duration:4.00, finishTime: 62.0, gear: "S15",desc: "Spin doctor")
     
+    @IBAction func returnToWorkoutSelction(segue:UIStoryboardSegue) {
+        // This will get us back I think!
+    }
     
     required init? (coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -46,8 +57,22 @@ class TrainingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       // Do any additional setup after loading the view.
+        let hardwork: WorkoutPPP = WorkoutPPP(workoutSelection: tonightsWorkoutStr)
+        
+        print(hardwork)
+        WorkoutName.text = String("Workout #\(hardwork.tonightsWorkout.name)")
+        
+        curEffortStruct = hardwork.tonightsWorkout.efforts[wkoutIndex]
+        
+        curEffortStr.text = String(curEffortStruct.duration)
+        curGearStr.text = curEffortStruct.gear
+        curDescStr.text = curEffortStruct.desc
+        
+        nextEffortStr.text = String(nextEffortStruct.duration)
+        nextGearStr.text = nextEffortStruct.gear
+        nextDescStr.text = nextEffortStruct.desc        
+ 
     }
 
     override func didReceiveMemoryWarning() {

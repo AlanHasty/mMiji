@@ -12,6 +12,8 @@ class WorkoutsViewController: UITableViewController {
 
     var workoutList: [String] = []
     let workoutCell = "WorkoutCell"
+    var tonightsWorkout = 999
+    var tonightsWorkoutStr: String = "Nothing Selected"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,12 +70,24 @@ class WorkoutsViewController: UITableViewController {
 
         return cell
     }
-    @IBAction func loadMeNow(sender: AnyObject)
-    {
-        let hardwork: WorkoutPPP = WorkoutPPP(workoutSelection: "W36")
-        print("This is the workout for tonight \(hardwork)")
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var wkoutString:String = workoutList[indexPath.row]
+        let removeRange = wkoutString.endIndex.advancedBy(-5)..<wkoutString.endIndex
+        
+        
+        wkoutString.removeRange(removeRange)
+        tonightsWorkoutStr = wkoutString
+        wkoutString.removeAtIndex(wkoutString.startIndex)
+        if let wkselection = Int(wkoutString) {
+            tonightsWorkout = wkselection
+        }
+        
+//        let alertController = UIAlertController(title: "Workout Selction", message: "Workout \(tonightsWorkoutStr) selected", preferredStyle: .Alert)
+//          alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil ))
+//          presentViewController(alertController, animated: true, completion: nil)
     }
-
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -110,14 +124,37 @@ class WorkoutsViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "trainingSheet"
+        {
+            let nav = segue.destinationViewController
+            
+            let vc =   nav.childViewControllers[0]  as! TrainingViewController
+            vc.tonightsWorkout = tonightsWorkout
+            vc.tonightsWorkoutStr = tonightsWorkoutStr
+        }
     }
-    */
+
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        
+        if identifier == "trainingSheet" {
+            
+            if tonightsWorkout == 999 {
+                // put up modal - Make a selection
+                let alertController = UIAlertController(title: "Workout Selction", message: "No Workout selected", preferredStyle: .Alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil ))
+                presentViewController(alertController, animated: true, completion: nil)
+                
+                return false
+            }
+            return true
+        }
+        return false
+    }
+    
 
 }

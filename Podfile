@@ -6,6 +6,7 @@ use_frameworks!
 target 'mMiji' do
    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
    pod 'MBProgressHUD', '~> 0.9.0'
+   pod 'SFGaugeView'
 end
 
 target 'mMijiTests' do
