@@ -244,6 +244,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-MA-zqi">
                                 <rect key="frame" x="12" y="550" width="46" height="30"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startTonightsWorkout:" destination="iWU-Sr-fVl" eventType="touchUpInside" id="8WM-Z9-l2W"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -283,8 +286,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Amp-o3-WOi" kind="relationship" relationship="viewControllers" id="8j1-21-lsV"/>
                         <segue destination="ygu-ay-nMV" kind="relationship" relationship="viewControllers" id="WdZ-Ws-GIf"/>
+                        <segue destination="Amp-o3-WOi" kind="relationship" relationship="viewControllers" id="8j1-21-lsV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHY-h5-tf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
