@@ -12,12 +12,20 @@ import SwiftyJSON
 // MARK:- Model
 //-------------//
 
+//{ "duration": 1.0, "finishTime": 3.0, "isplit": [{ "iname":"on", "itime":10}, {"iname":"high", "itime":5 }], "gear": "B17", "description": "10 sec 100 RPM / 5 sec high RPM " }
+struct Interval {
+    let intString: String
+    let intTime: Int
+}
+
+
 //{ "duration": 1.0, "finishTime": 19.0, "gear": "S16", "description": "100+RPM" } ,
 struct Effort {
     let duration: Float
     let finishTime: Float
     let gear: String
     let desc: String
+    let intervals: [Interval]
 }
 
 extension Effort: CustomStringConvertible {
@@ -25,8 +33,8 @@ extension Effort: CustomStringConvertible {
 }
 
 struct Workout {
-    let name: Int
-    let efforts: [Effort]
+    var name: Int
+    var efforts: [Effort]
 }
 
 extension Workout: CustomStringConvertible {
@@ -36,6 +44,12 @@ extension Workout: CustomStringConvertible {
 class WorkoutPPP {
     
     var tonightsWorkout: Workout
+    
+    init (){
+        let e1 = Effort(duration: 1.0, finishTime: 1.0, gear: "B17", desc: "Spin",
+                        intervals: [])
+        tonightsWorkout = Workout(name: 99, efforts: [e1])
+    }
     
     init (workoutSelection: String )
     {
@@ -61,7 +75,8 @@ class WorkoutPPP {
             let finishT  = effortJson["finishTime"].float
             let gear = effortJson["gear"].string
             let desc = effortJson["description"].string
-            let e1 = Effort(duration: duration!, finishTime: finishT!, gear: gear!, desc: desc!)
+            let e1 = Effort(duration: duration!, finishTime: finishT!, gear: gear!, desc: desc!,
+                            intervals: [])
             e1
             effortsList += [e1]
         }
