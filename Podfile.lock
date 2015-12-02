@@ -1,10 +1,12 @@
 PODS:
   - MBProgressHUD (0.9.1)
+  - SFCountdownView (0.0.1)
   - SFGaugeView (0.0.7)
   - SwiftyJSON (2.3.1)
 
 DEPENDENCIES:
-  - MBProgressHUD (~> 0.9.0)
+  - MBProgressHUD (~> 0.9.1)
+  - SFCountdownView
   - SFGaugeView
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -19,6 +21,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   MBProgressHUD: 2a730b1083f7ef24254b5e524d09a85db08ecc5c
+  SFCountdownView: 5668c8240de8b2a5725df4702a2722c69023f628
   SFGaugeView: ff70787515f5dbf54c26a62a2fec8a5e95d4aa35
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
 

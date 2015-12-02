@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SFCountdownView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SFGaugeView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,17 +32,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2437D4FC38C9C8811DFCFDD774DFD95D</key>
+		<key>11FBB538837A4ACE0540D85EDB7D73DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>777D844B9EB90200F000B493331D9BBA</key>
+		<key>5B976C49CDEE7FF2EC00BEC182584182</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D5E70ED23AE2414474B759C7E044A260</key>
+		<key>7923D0F1A299EC7037B9480074760E0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADDEEDB9EA96211053E504788D4F9BDC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

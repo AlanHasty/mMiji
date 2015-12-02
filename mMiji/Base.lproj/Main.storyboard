@@ -248,6 +248,17 @@
                                     <action selector="startTonightsWorkout:" destination="iWU-Sr-fVl" eventType="touchUpInside" id="8WM-Z9-l2W"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts8-Uw-fUO">
+                                <rect key="frame" x="109" y="550" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="startHUD:" destination="iWU-Sr-fVl" eventType="touchUpInside" id="mWg-85-nie"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saA-jR-8hG" userLabel="contentView">
+                                <rect key="frame" x="187" y="154" width="143" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -260,6 +271,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="WorkoutName" destination="dOI-OH-puB" id="nAl-eh-vmg"/>
+                        <outlet property="contentView" destination="saA-jR-8hG" id="gdg-nz-eHi"/>
                         <outlet property="curDescStr" destination="lIX-aq-xT4" id="2p6-6q-W2E"/>
                         <outlet property="curEffortStr" destination="V7q-T8-wjr" id="da3-4a-7Ls"/>
                         <outlet property="curGearStr" destination="03J-pv-9oI" id="wIx-KO-EGS"/>

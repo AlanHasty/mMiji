@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B498B0D424D6023537D6B727 /* Pods_mMiji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D39122DEC3955CF66E985F /* Pods_mMiji.framework */; };
+		E701B52A1C0B87E500C01D82 /* W11.json in Resources */ = {isa = PBXBuildFile; fileRef = E701B5291C0B87E500C01D82 /* W11.json */; };
 		E729B3361BE0E7BD0083D163 /* CSCDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729B3351BE0E7BD0083D163 /* CSCDevice.swift */; };
 		E729B3381BE0E9B80083D163 /* CSCDeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729B3371BE0E9B80083D163 /* CSCDeviceData.swift */; };
 		E7637E641BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */; };
@@ -164,6 +165,7 @@
 /* Begin PBXFileReference section */
 		B1D39122DEC3955CF66E985F /* Pods_mMiji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mMiji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D441AF71F6EF11080F96DD0D /* Pods-mMiji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mMiji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mMiji/Pods-mMiji.debug.xcconfig"; sourceTree = "<group>"; };
+		E701B5291C0B87E500C01D82 /* W11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = W11.json; path = workouts/W11.json; sourceTree = "<group>"; };
 		E729B3351BE0E7BD0083D163 /* CSCDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCDevice.swift; sourceTree = "<group>"; };
 		E729B3371BE0E9B80083D163 /* CSCDeviceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCDeviceData.swift; sourceTree = "<group>"; };
 		E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 		E79535271BDA4ACB00C1C93C /* workouts */ = {
 			isa = PBXGroup;
 			children = (
+				E701B5291C0B87E500C01D82 /* W11.json */,
 				E795348F1BDA4AB100C1C93C /* W13.json */,
 				E79534901BDA4AB100C1C93C /* W14.json */,
 				E79534911BDA4AB100C1C93C /* W15.json */,
@@ -510,6 +513,7 @@
 				E79534DC1BDA4AB100C1C93C /* W26.json in Resources */,
 				E79535061BDA4AB100C1C93C /* W40.json in Resources */,
 				E79534B51BDA4AB100C1C93C /* W13.json in Resources */,
+				E701B52A1C0B87E500C01D82 /* W11.json in Resources */,
 				E79535121BDA4AB100C1C93C /* W44.json in Resources */,
 				E79534FA1BDA4AB100C1C93C /* W36.json in Resources */,
 				E795350C1BDA4AB100C1C93C /* W42.json in Resources */,

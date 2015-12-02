@@ -7,6 +7,13 @@
 //
 
 import UIKit
+import Foundation
+import CoreGraphics
+
+import MBProgressHUD
+import SFGaugeView
+import SFCountdownView
+
 
 struct Timers {
     var workoutTime: Int = 0
@@ -27,10 +34,14 @@ class TrainingViewController: UIViewController {
     
     var wkoutIndex = 0
     var hardwork: WorkoutPPP = WorkoutPPP()
+
+    var hud: MBProgressHUD =  MBProgressHUD()
+    
+    var hudShowing: Bool = false;
     
     @IBOutlet weak var WorkoutName: UILabel!
     
-    @IBOutlet weak var intervalTimerString: UILabel! 
+    @IBOutlet weak var intervalTimerString: UILabel!
     @IBOutlet weak var effortTimerString: UILabel!
     @IBOutlet weak var workoutTimerString: UILabel!
     
@@ -49,10 +60,18 @@ class TrainingViewController: UIViewController {
         // This will get us back I think!
     }
     
-    required init? (coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+  
+   
+    @IBOutlet weak var contentView: UIView!
+    
+    @IBAction func startHUD(sender: AnyObject) {
+//        var hud = MBProgressHUD.showHUDAddedTo(contentView, animated: true)
+//        hud.labelText = " 5 "
+//        hud.labelColor = UIColor.redColor()
+//        contentView.hidden = false
 
+        
+    }
     
     func manageTicks() {
         wkoutTimers.effortTime -= 1
@@ -66,11 +85,18 @@ class TrainingViewController: UIViewController {
 //    }
     func updateEffortTimerText()
     {
+        
+        
         let effMin = wkoutTimers.effortTime / 60
         let effSec = wkoutTimers.effortTime % 60
         
         effortTimerString.text = String(format: "%.2d:%.2d",effMin, effSec)
         
+        if wkoutTimers.effortTime < 5  && hudShowing == false {
+            hudShowing = true;
+            hud.hidden = false;
+            hud.show(true)
+        }
     }
     
     func updateWorkoutTimerText()
@@ -104,6 +130,10 @@ class TrainingViewController: UIViewController {
                 updateCurrentEfffortLine(wkoutIndex)
                 updateNextEffortLine(wkoutIndex)
                 //updateIntervalTimerText(wkoutIndex)
+                hud.hidden = false
+                
+                hud.hide(true)
+                hudShowing = false
                 
             }
             else
@@ -129,6 +159,8 @@ class TrainingViewController: UIViewController {
             print("Setting EfforTime = \(wkoutTimers.effortTime)")
         }
     }
+    
+
     
     func updateNextEffortLine(index: Int) {
 
@@ -180,7 +212,28 @@ class TrainingViewController: UIViewController {
         updateCurrentEfffortLine(wkoutIndex)
         updateNextEffortLine(wkoutIndex)
         updateEffortTimerText()
+        
+        hud = MBProgressHUD.showHUDAddedTo(contentView, animated: true)
+        hud.labelText = " 5 "
+        hud.labelColor = UIColor.redColor()
+        hud.hidden = false
+        hud.show(true)
+        
+//        countdownView.hidden = true
+//        countdownView.backgroundAlpha = 0.5
+//        countdownView.countdownColor = UIColor.redColor()
+//        countdownView.countdownFrom = 5
+//        countdownView.updateAppearance()
+        
+        contentView.hidden = true
+        
+//        gaugeView.maxlevel = 100
+//        gaugeView.minlevel = 50
+//        gaugeView.needleColor  = UIColor.redColor()
+//        gaugeView.bgColor = UIColor.blackColor()
+//        gaugeView.currentLevel = 80
  
+        
     }
 
     override func didReceiveMemoryWarning() {

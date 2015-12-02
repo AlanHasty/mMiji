@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0B59FD36F436BE1A4A241BA6'
-               BlueprintName = 'SwiftyJSON'
+               BlueprintIdentifier = '469723F90D37DDE207363980'
+               BlueprintName = 'SFCountdownView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyJSON.framework'>
+               BuildableName = 'SFCountdownView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

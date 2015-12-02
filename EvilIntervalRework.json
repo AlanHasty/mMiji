@@ -1,0 +1,8 @@
+{ "workoutNum": 99, "efforts": [
+{ "duration": 2.0, "finishTime": 2.0, "isplit": [{"iname":"on",     "itime": 45}, {"iname":"max", "itime":15}], "gear": "S16", "description": "45 sec 100 RPM / 15 sec max" } ,
+{ "duration": 1.0, "finishTime": 3.0, "isplit": [{"iname":"on",     "itime": 40}, {"iname":"high",    "itime":20}], "gear": "B17", "description": "40 sec 100 RPM / 20 sec high RPM " } ,
+{ "duration": 1.0, "finishTime": 4.0, "isplit": [{"iname":"on",     "itime": 55}, {"iname":"sprint",  "itime":5}], "gear": "B17", "description": "55 sec 100 RPM/ 5 sec Sprint" } ,
+{ "duration": 1.0, "finishTime": 5.0, "isplit": [{"iname":"sprint", "itime": 15}, {"iname":"sustain", "itime":45}], "gear": "B14", "description": "15 sec Sprint/45 sec Sustain" } ,
+{ "duration": 3.0, "finishTime": 8.0, "isplit": [{"iname":"high",   "itime": 30}, {"iname":"on",      "itime":30}], "gear": "S15", "description": "30 sec high RPM/30 sec 100 RPM" } ,
+{ "duration": 52.0, "finishTime": 60.0, "gear": "S17", "description": "Cool Down" } 
+] }
