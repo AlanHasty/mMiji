@@ -67,7 +67,10 @@ class WorkoutPPP {
         
         let subJson = json["efforts"][3]
         
+        var intervalList = [Interval]()
+        
         subJson["description"]
+        //{ "duration": 1.0, "finishTime": 3.0, "isplit": [{ "iname":"on", "itime":10}, {"iname":"high", "itime":5 }], "gear": "B17", "description": "10 sec 100 RPM / 5 sec high RPM " }
         
         for index in 0..<json["efforts"].count {
             let effortJson = json["efforts"][index]
@@ -75,8 +78,21 @@ class WorkoutPPP {
             let finishT  = effortJson["finishTime"].float
             let gear = effortJson["gear"].string
             let desc = effortJson["description"].string
+            
+            let numIntervals = effortJson["isplit"][].count
+            if numIntervals > 0 {
+                intervalList = []  // reset this each time
+                for iIndex in 0..<effortJson["isplit"].count {
+                    let iName = effortJson["isplit"][iIndex]["iname"].string
+                    let iTime = effortJson["isplit"][iIndex]["itime"].int
+                    
+                    let intVal1 = Interval(intString: iName!, intTime: iTime!)
+                    intervalList += [intVal1]
+                }
+            }
+            
             let e1 = Effort(duration: duration!, finishTime: finishT!, gear: gear!, desc: desc!,
-                            intervals: [])
+                            intervals: intervalList)
             e1
             effortsList += [e1]
         }
