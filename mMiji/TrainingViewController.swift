@@ -37,11 +37,14 @@ class TrainingViewController: UIViewController {
 
     var hud: MBProgressHUD =  MBProgressHUD()
     
-    var hudShowing: Bool = false;
+    var hudShowing: Bool = false
+    var pingPong:Bool = false
     
     @IBOutlet weak var WorkoutName: UILabel!
     
+    @IBOutlet weak var intervalTimerDesc: UILabel!
     @IBOutlet weak var intervalTimerString: UILabel!
+    @IBOutlet weak var intervalTextString: UILabel!
     @IBOutlet weak var effortTimerString: UILabel!
     @IBOutlet weak var workoutTimerString: UILabel!
     
@@ -74,19 +77,74 @@ class TrainingViewController: UIViewController {
     }
     
     func manageTicks() {
-        wkoutTimers.effortTime -= 1
-        wkoutTimers.intervalTime -= 1
         wkoutTimers.workoutTime += 1
+        wkoutTimers.effortTime -= 1
+        if hardwork.tonightsWorkout.efforts[wkoutIndex].intervals.count != 0
+        {
+            wkoutTimers.intervalTime -= 1
+        }
+        else
+        {
+            wkoutTimers.intervalTime = 0
+        }
     }
-
-//    func updateIntervalTimerText(index:Int)
-//    {
-//        if hardwork.tonightsWorkout.efforts[index].
-//    }
+    
+    func intervalTime()
+    {
+        let iMin = wkoutTimers.intervalTime / 60
+        let iSec = wkoutTimers.intervalTime % 60
+        intervalTimerString.text = String(format: "%.2d:%.2d",iMin, iSec)
+    }
+    
+    func updateIntervalTimerText()
+    {
+        let currentEffort = hardwork.tonightsWorkout.efforts[wkoutIndex]
+        if currentEffort.intervals.count != 0
+        {
+            intervalTime()
+            updateInterval()
+        }
+    }
+    
+    func updateInterval()
+    {
+        let currentEffort = hardwork.tonightsWorkout.efforts[wkoutIndex]
+        if currentEffort.intervals.count != 0
+        {
+            if wkoutTimers.intervalTime == 0
+            {
+                intervalTimerString.hidden = false
+                intervalTextString.hidden = false
+                intervalTimerDesc.hidden = false
+                if ( pingPong == true )
+                {
+                    intervalTextString.text = currentEffort.intervals[1].intString
+                    wkoutTimers.intervalTime = currentEffort.intervals[1].intTime
+                    print("Setting Interval Time = \(wkoutTimers.intervalTime)")
+                    intervalTime()
+                    pingPong = false
+                }
+                else
+                {
+                    intervalTextString.text = currentEffort.intervals[0].intString
+                    wkoutTimers.intervalTime = currentEffort.intervals[0].intTime
+                    intervalTime()
+                    print("Setting Interval Time = \(wkoutTimers.intervalTime)")
+                    pingPong = true
+                }
+            }
+        }
+        else
+        {
+            // This is the case that there is no interval timer 
+            intervalTimerString.hidden = true
+            intervalTextString.hidden = true
+            intervalTimerDesc.hidden = true
+        }
+    }
+    
     func updateEffortTimerText()
     {
-        
-        
         let effMin = wkoutTimers.effortTime / 60
         let effSec = wkoutTimers.effortTime % 60
         
@@ -114,22 +172,18 @@ class TrainingViewController: UIViewController {
             return true
         }
         return false
-    
     }
     
     func manageTimersAndUpdateWorkout()
     {
         manageTicks()
-        updateWorkoutTimerText()
-        updateEffortTimerText()
-        
         
         if isEndOfEffort() {
             wkoutIndex++
             if wkoutIndex < hardwork.tonightsWorkout.efforts.count {
                 updateCurrentEfffortLine(wkoutIndex)
                 updateNextEffortLine(wkoutIndex)
-                //updateIntervalTimerText(wkoutIndex)
+                
                 hud.hidden = false
                 
                 hud.hide(true)
@@ -143,9 +197,13 @@ class TrainingViewController: UIViewController {
                 alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil ))
                 presentViewController(alertController, animated: true, completion: nil)
             }
-
         }
-        
+        else
+        {
+            updateWorkoutTimerText()
+            updateEffortTimerText()
+            updateIntervalTimerText()
+        }
     }
     
     func updateCurrentEfffortLine(index: Int) {
@@ -156,11 +214,11 @@ class TrainingViewController: UIViewController {
             curDescStr.text = curEffortStruct.desc
             
             wkoutTimers.effortTime = Int((curEffortStruct.duration * 60 ) )
-            print("Setting EfforTime = \(wkoutTimers.effortTime)")
+            //updateInterval()
+            print("Setting Effort Time = \(wkoutTimers.effortTime)")
+            updateInterval()
         }
     }
-    
-
     
     func updateNextEffortLine(index: Int) {
 
@@ -212,6 +270,7 @@ class TrainingViewController: UIViewController {
         updateCurrentEfffortLine(wkoutIndex)
         updateNextEffortLine(wkoutIndex)
         updateEffortTimerText()
+        //updateInterval()
         
         hud = MBProgressHUD.showHUDAddedTo(contentView, animated: true)
         hud.labelText = " 5 "

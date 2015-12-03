@@ -256,9 +256,15 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saA-jR-8hG" userLabel="contentView">
-                                <rect key="frame" x="187" y="154" width="143" height="128"/>
+                                <rect key="frame" x="239" y="154" width="143" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbv-qp-vPw" userLabel="intervalEffort">
+                                <rect key="frame" x="198" y="261" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -276,6 +282,8 @@
                         <outlet property="curEffortStr" destination="V7q-T8-wjr" id="da3-4a-7Ls"/>
                         <outlet property="curGearStr" destination="03J-pv-9oI" id="wIx-KO-EGS"/>
                         <outlet property="effortTimerString" destination="HJe-k7-v5W" id="Gev-3i-rDD"/>
+                        <outlet property="intervalTextString" destination="Pbv-qp-vPw" id="4PC-u0-L8h"/>
+                        <outlet property="intervalTimerDesc" destination="OIw-5b-CvA" id="DsZ-5B-8xP"/>
                         <outlet property="intervalTimerString" destination="DW6-3q-Hyl" id="BYI-4u-jup"/>
                         <outlet property="nextDescStr" destination="lL6-Sq-c1i" id="vek-du-PiM"/>
                         <outlet property="nextEffortStr" destination="KxB-Yh-8LZ" id="xhc-L0-cJW"/>

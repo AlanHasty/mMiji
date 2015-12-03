@@ -79,9 +79,9 @@ class WorkoutPPP {
             let gear = effortJson["gear"].string
             let desc = effortJson["description"].string
             
-            let numIntervals = effortJson["isplit"][].count
+            let numIntervals = effortJson["isplit"].count
+            intervalList = []  // reset this each time
             if numIntervals > 0 {
-                intervalList = []  // reset this each time
                 for iIndex in 0..<effortJson["isplit"].count {
                     let iName = effortJson["isplit"][iIndex]["iname"].string
                     let iTime = effortJson["isplit"][iIndex]["itime"].int
