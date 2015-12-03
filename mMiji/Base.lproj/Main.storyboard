@@ -241,8 +241,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-MA-zqi">
-                                <rect key="frame" x="12" y="550" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-MA-zqi">
+                                <rect key="frame" x="12" y="560" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startTonightsWorkout:" destination="iWU-Sr-fVl" eventType="touchUpInside" id="8WM-Z9-l2W"/>
@@ -267,6 +267,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dje-MA-zqi" firstAttribute="leading" secondItem="vRc-mu-Hxe" secondAttribute="leading" constant="12" id="G7r-7s-Rty"/>
+                            <constraint firstItem="JSV-sd-JL7" firstAttribute="top" secondItem="Dje-MA-zqi" secondAttribute="bottom" constant="10" id="bAc-Qa-7pp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HWE-ms-f7c">
                         <barButtonItem key="rightBarButtonItem" title="Back" id="s5B-fx-ETB">

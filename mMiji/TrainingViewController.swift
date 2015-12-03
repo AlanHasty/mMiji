@@ -196,6 +196,7 @@ class TrainingViewController: UIViewController {
                 let alertController = UIAlertController(title: "Whew!", message: "Workout Done", preferredStyle: .Alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil ))
                 presentViewController(alertController, animated: true, completion: nil)
+                workoutRunning = OperationState.Finished
             }
         }
         else
@@ -239,22 +240,39 @@ class TrainingViewController: UIViewController {
         }
     }
     
+    enum OperationState {
+        case NotStarted
+        case Running
+        case Paused
+        case Finished
+    }
+    var workoutRunning: OperationState = OperationState.NotStarted
+    
     @IBAction func startTonightsWorkout(sender: UIButton) {
         // Here we go..
-        if ( wkoutTimers.workoutTime == 0 )
+        if ( workoutRunning == OperationState.NotStarted)
         {
             runningTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "manageTimersAndUpdateWorkout",
                 userInfo: nil, repeats: true)
+            workoutRunning = OperationState.Running
 
             sender.setTitle("Pause", forState: UIControlState.Normal)
         }
         else
         {
-            runningTimer.invalidate()
-            sender.setTitle("Start", forState: UIControlState.Normal)
-            wkoutTimers.workoutTime = 0
-            wkoutTimers.effortTime = 0
-            wkoutTimers.intervalTime = 0 
+            if workoutRunning == OperationState.Running
+            {
+                runningTimer.invalidate()
+                sender.setTitle("Continue", forState: UIControlState.Normal)
+                workoutRunning = OperationState.Paused
+            }
+            else if workoutRunning == OperationState.Paused
+            {
+                runningTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "manageTimersAndUpdateWorkout",
+                    userInfo: nil, repeats: true)
+                workoutRunning = OperationState.Running
+                sender.setTitle("Pause", forState: UIControlState.Normal)
+            }
         }
     }
 
