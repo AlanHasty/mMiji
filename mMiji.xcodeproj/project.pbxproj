@@ -223,7 +223,7 @@
 		E79534B31BDA4AB100C1C93C /* W49.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = W49.json; path = workouts/W49.json; sourceTree = "<group>"; };
 		E79534B41BDA4AB100C1C93C /* W50.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = W50.json; path = workouts/W50.json; sourceTree = "<group>"; };
 		E7A9FE5A1C01354A00A5450A /* workoutParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = workoutParser.swift; sourceTree = "<group>"; };
-		E7AF370A1C0A5B490024F218 /* TrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		E7AF370A1C0A5B490024F218 /* TrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TrainingViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E82DCFC66610871E3B5EDF51 /* Pods-mMiji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mMiji.release.xcconfig"; path = "Pods/Target Support Files/Pods-mMiji/Pods-mMiji.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

@@ -11,7 +11,7 @@ import Foundation
 import CoreGraphics
 
 import MBProgressHUD
-import SFGaugeView
+import WMGaugeView
 import SFCountdownView
 
 
@@ -64,7 +64,7 @@ class TrainingViewController: UIViewController {
     }
     
   
-    @IBOutlet weak var cadenceView: SFGaugeView!
+    @IBOutlet weak var cadenceView: WMGaugeView!
    
     @IBOutlet weak var contentView: UIView!
     
@@ -90,13 +90,17 @@ class TrainingViewController: UIViewController {
         {
             wkoutTimers.intervalTime = 0
         }
+        var newVal:Float
         if Bool(wkoutTimers.workoutTime % 2)
         {
-            cadenceView.currentLevel = localCadence + 5
+            newVal = Float(localCadence + 5)
+            cadenceView.setValue(newVal, animated: false)
         }
         else
         {
-            cadenceView.currentLevel = localCadence - 5
+            newVal = Float(localCadence - 5)
+            cadenceView.setValue(newVal, animated: false)
+            //cadenceView.currentLevel
         }
     
     }
@@ -317,12 +321,22 @@ class TrainingViewController: UIViewController {
         
         contentView.hidden = true
         
-        cadenceView.maxlevel = 200
-        cadenceView.minlevel = 0
-        cadenceView.needleColor  = UIColor.redColor()
-        cadenceView.bgColor = UIColor.init(colorLiteralRed: 0.13, green: 0.64, blue: 0.33, alpha: 1)
-        
-        cadenceView.currentLevel = 85
+
+        //cadenceView.style = WMGaugeView.WMGaugeViewStyleFlatThin
+        cadenceView.setValue(90, animated: false)
+        cadenceView.maxValue = 200.0
+        cadenceView.scaleDivisions = 5
+        cadenceView.scaleSubdivisions = 10
+        cadenceView.scaleStartAngle = 36
+        cadenceView.scaleEndAngle = 324
+        cadenceView.scaleDivisionColor = UIColor.redColor()
+        //cadenceView.showScaleShadow = NO
+        //cadenceView.scaleFont = UIFont(fontWithName:@"AvenirNext-UltraLight" size:0.065)
+        cadenceView.scalesubdivisionsaligment = WMGaugeViewSubdivisionsAlignmentCenter;
+        cadenceView.scaleSubdivisionsWidth = 0.002;
+        cadenceView.scaleSubdivisionsLength = 0.04;
+        cadenceView.scaleDivisionsWidth = 0.007;
+        cadenceView.scaleDivisionsLength = 0.07;
  
         
     }
