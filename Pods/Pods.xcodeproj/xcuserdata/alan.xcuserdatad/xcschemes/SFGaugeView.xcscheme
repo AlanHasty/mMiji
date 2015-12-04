@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E4770CABEA80B8E4064FD20B'
+               BlueprintIdentifier = 'B8D5AE9E2B851734947C3AEB'
                BlueprintName = 'SFGaugeView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SFGaugeView.framework'>

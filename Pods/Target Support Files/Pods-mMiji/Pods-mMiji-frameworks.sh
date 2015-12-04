@@ -88,10 +88,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-mMiji/SFCountdownView.framework"
   install_framework "Pods-mMiji/SFGaugeView.framework"
   install_framework "Pods-mMiji/SwiftyJSON.framework"
+  install_framework "Pods-mMiji/WMGaugeView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-mMiji/MBProgressHUD.framework"
   install_framework "Pods-mMiji/SFCountdownView.framework"
   install_framework "Pods-mMiji/SFGaugeView.framework"
   install_framework "Pods-mMiji/SwiftyJSON.framework"
+  install_framework "Pods-mMiji/WMGaugeView.framework"
 fi

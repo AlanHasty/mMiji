@@ -64,6 +64,7 @@ class TrainingViewController: UIViewController {
     }
     
   
+    @IBOutlet weak var cadenceView: SFGaugeView!
    
     @IBOutlet weak var contentView: UIView!
     
@@ -76,6 +77,8 @@ class TrainingViewController: UIViewController {
         
     }
     
+    var localCadence: Int = 95;
+    
     func manageTicks() {
         wkoutTimers.workoutTime += 1
         wkoutTimers.effortTime -= 1
@@ -87,6 +90,15 @@ class TrainingViewController: UIViewController {
         {
             wkoutTimers.intervalTime = 0
         }
+        if Bool(wkoutTimers.workoutTime % 2)
+        {
+            cadenceView.currentLevel = localCadence + 5
+        }
+        else
+        {
+            cadenceView.currentLevel = localCadence - 5
+        }
+    
     }
     
     func intervalTime()
@@ -94,6 +106,7 @@ class TrainingViewController: UIViewController {
         let iMin = wkoutTimers.intervalTime / 60
         let iSec = wkoutTimers.intervalTime % 60
         intervalTimerString.text = String(format: "%.2d:%.2d",iMin, iSec)
+    
     }
     
     func updateIntervalTimerText()
@@ -141,6 +154,7 @@ class TrainingViewController: UIViewController {
             intervalTextString.hidden = true
             intervalTimerDesc.hidden = true
         }
+    
     }
     
     func updateEffortTimerText()
@@ -215,8 +229,8 @@ class TrainingViewController: UIViewController {
             curDescStr.text = curEffortStruct.desc
             
             wkoutTimers.effortTime = Int((curEffortStruct.duration * 60 ) )
-            //updateInterval()
             print("Setting Effort Time = \(wkoutTimers.effortTime)")
+            pingPong = false
             updateInterval()
         }
     }
@@ -288,7 +302,6 @@ class TrainingViewController: UIViewController {
         updateCurrentEfffortLine(wkoutIndex)
         updateNextEffortLine(wkoutIndex)
         updateEffortTimerText()
-        //updateInterval()
         
         hud = MBProgressHUD.showHUDAddedTo(contentView, animated: true)
         hud.labelText = " 5 "
@@ -304,11 +317,12 @@ class TrainingViewController: UIViewController {
         
         contentView.hidden = true
         
-//        gaugeView.maxlevel = 100
-//        gaugeView.minlevel = 50
-//        gaugeView.needleColor  = UIColor.redColor()
-//        gaugeView.bgColor = UIColor.blackColor()
-//        gaugeView.currentLevel = 80
+        cadenceView.maxlevel = 200
+        cadenceView.minlevel = 0
+        cadenceView.needleColor  = UIColor.redColor()
+        cadenceView.bgColor = UIColor.init(colorLiteralRed: 0.13, green: 0.64, blue: 0.33, alpha: 1)
+        
+        cadenceView.currentLevel = 85
  
         
     }

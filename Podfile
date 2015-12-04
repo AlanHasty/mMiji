@@ -8,6 +8,7 @@ target 'mMiji' do
    pod 'MBProgressHUD', '~> 0.9.1'
    pod 'SFGaugeView'
    pod 'SFCountdownView'
+   pod 'WMGaugeView'
 end
 
 target 'mMijiTests' do

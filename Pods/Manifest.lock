@@ -3,12 +3,14 @@ PODS:
   - SFCountdownView (0.0.1)
   - SFGaugeView (0.0.7)
   - SwiftyJSON (2.3.1)
+  - WMGaugeView (0.0.3)
 
 DEPENDENCIES:
   - MBProgressHUD (~> 0.9.1)
   - SFCountdownView
   - SFGaugeView
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - WMGaugeView
 
 EXTERNAL SOURCES:
   SwiftyJSON:
@@ -24,5 +26,6 @@ SPEC CHECKSUMS:
   SFCountdownView: 5668c8240de8b2a5725df4702a2722c69023f628
   SFGaugeView: ff70787515f5dbf54c26a62a2fec8a5e95d4aa35
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
+  WMGaugeView: 1c7390627c9afdfc38f27c74cb329f6a580e8d7d
 
 COCOAPODS: 0.39.0

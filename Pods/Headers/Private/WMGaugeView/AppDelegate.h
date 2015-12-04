@@ -1,0 +1,1 @@
+../../../WMGaugeView/WMGaugeView/AppDelegate.h

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D66990A2E0152FF843D2090F'
-               BlueprintName = 'SwiftyJSON'
+               BlueprintIdentifier = '3B27A3C143A544F8C4ACBAC0'
+               BlueprintName = 'WMGaugeView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyJSON.framework'>
+               BuildableName = 'WMGaugeView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

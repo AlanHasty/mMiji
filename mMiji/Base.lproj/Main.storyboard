@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IYl-UW-aXA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Devices View Controller-->
@@ -248,8 +249,8 @@
                                     <action selector="startTonightsWorkout:" destination="iWU-Sr-fVl" eventType="touchUpInside" id="8WM-Z9-l2W"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts8-Uw-fUO">
-                                <rect key="frame" x="109" y="550" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts8-Uw-fUO">
+                                <rect key="frame" x="87" y="560" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="startHUD:" destination="iWU-Sr-fVl" eventType="touchUpInside" id="mWg-85-nie"/>
@@ -265,11 +266,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKd-Zh-vCK" customClass="SFGaugeView">
+                                <rect key="frame" x="12" y="290" width="243" height="275"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Dje-MA-zqi" firstAttribute="leading" secondItem="vRc-mu-Hxe" secondAttribute="leading" constant="12" id="G7r-7s-Rty"/>
+                            <constraint firstItem="ts8-Uw-fUO" firstAttribute="leading" secondItem="Dje-MA-zqi" secondAttribute="trailing" constant="41" id="K4J-Hj-01i"/>
+                            <constraint firstItem="JSV-sd-JL7" firstAttribute="top" secondItem="ts8-Uw-fUO" secondAttribute="bottom" constant="10" id="VlX-pu-8ZT"/>
                             <constraint firstItem="JSV-sd-JL7" firstAttribute="top" secondItem="Dje-MA-zqi" secondAttribute="bottom" constant="10" id="bAc-Qa-7pp"/>
+                            <constraint firstItem="GKd-Zh-vCK" firstAttribute="leading" secondItem="vRc-mu-Hxe" secondAttribute="leadingMargin" constant="10" id="p2p-Fn-mD3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HWE-ms-f7c">
@@ -281,6 +289,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="WorkoutName" destination="dOI-OH-puB" id="nAl-eh-vmg"/>
+                        <outlet property="cadenceView" destination="GKd-Zh-vCK" id="zMw-kw-2OP"/>
                         <outlet property="contentView" destination="saA-jR-8hG" id="gdg-nz-eHi"/>
                         <outlet property="curDescStr" destination="lIX-aq-xT4" id="2p6-6q-W2E"/>
                         <outlet property="curEffortStr" destination="V7q-T8-wjr" id="da3-4a-7Ls"/>

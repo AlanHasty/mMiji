@@ -29,34 +29,13 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>WMGaugeView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>11FBB538837A4ACE0540D85EDB7D73DD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5B976C49CDEE7FF2EC00BEC182584182</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7923D0F1A299EC7037B9480074760E0B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ADDEEDB9EA96211053E504788D4F9BDC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
