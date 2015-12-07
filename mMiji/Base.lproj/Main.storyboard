@@ -20,6 +20,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mua-9N-Lu5">
                                 <rect key="frame" x="20" y="505" width="150" height="29"/>
                                 <state key="normal" title="Scan for devices"/>
+                                <connections>
+                                    <action selector="scanForDevices:" destination="H9r-gS-A8x" eventType="touchUpInside" id="07d-t4-JMv"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="129" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jNd-wu-y3W">
                                 <rect key="frame" x="20" y="64" width="560" height="416"/>
@@ -72,11 +75,18 @@
                                     <outlet property="delegate" destination="H9r-gS-A8x" id="2LB-fG-kPJ"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YP0-op-Dyx">
+                                <rect key="frame" x="269" y="509" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="7wI-k8-i2k"/>
                     <connections>
+                        <outlet property="labelStatus" destination="YP0-op-Dyx" id="23T-n9-0fz"/>
                         <outlet property="tableView" destination="jNd-wu-y3W" id="PfQ-r7-9JH"/>
                     </connections>
                 </viewController>
