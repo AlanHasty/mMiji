@@ -75,7 +75,7 @@
                                     <outlet property="delegate" destination="H9r-gS-A8x" id="2LB-fG-kPJ"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YP0-op-Dyx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YP0-op-Dyx">
                                 <rect key="frame" x="269" y="509" width="311" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -87,6 +87,7 @@
                     <navigationItem key="navigationItem" id="7wI-k8-i2k"/>
                     <connections>
                         <outlet property="labelStatus" destination="YP0-op-Dyx" id="23T-n9-0fz"/>
+                        <outlet property="scanButton" destination="mua-9N-Lu5" id="TsT-l6-Sg9"/>
                         <outlet property="tableView" destination="jNd-wu-y3W" id="PfQ-r7-9JH"/>
                     </connections>
                 </viewController>

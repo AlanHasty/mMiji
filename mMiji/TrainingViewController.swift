@@ -22,7 +22,7 @@ struct Timers {
 }
 
 class TrainingViewController: UIViewController {
-
+    
     var tonightsWorkoutStr = ""
     var tonightsWorkout = 999
     
@@ -31,7 +31,7 @@ class TrainingViewController: UIViewController {
     var wkoutTimers: Timers = Timers()
     
     var timerSpeed: Float = 0.1 // Change this to 1.0 if you want proper time
-    
+    var selectedRiderIndex: Int = 0
     var wkoutIndex = 0
     var hardwork: WorkoutPPP = WorkoutPPP()
 
@@ -77,7 +77,7 @@ class TrainingViewController: UIViewController {
         
     }
     
-    var localCadence: Int = 95;
+
     
     func manageTicks() {
         wkoutTimers.workoutTime += 1
@@ -90,18 +90,24 @@ class TrainingViewController: UIViewController {
         {
             wkoutTimers.intervalTime = 0
         }
-        var newVal:Float
-        if Bool(wkoutTimers.workoutTime % 2)
-        {
-            newVal = Float(localCadence + 5)
-            cadenceView.setValue(newVal, animated: false)
-        }
-        else
-        {
-            newVal = Float(localCadence - 5)
-            cadenceView.setValue(newVal, animated: false)
-            //cadenceView.currentLevel
-        }
+        
+      
+        let newVal = Float(cscDevices[pairedRiderIndex].wheelRevs)
+        cadenceView.setValue(newVal, animated: false)
+//        if Bool(wkoutTimers.workoutTime % 2)
+//        
+//            
+//            
+//            //newVal = Float(localCadence + 5)
+//            
+//            cadenceView.setValue(newVal, animated: false)
+//        }
+//        else
+//        {
+//            newVal = Float(localCadence - 5)
+//            cadenceView.setValue(newVal, animated: false)
+//            //cadenceView.currentLevel
+//        }
     
     }
     
@@ -321,9 +327,19 @@ class TrainingViewController: UIViewController {
         
         contentView.hidden = true
         
+        var loopCount = 0
+        for rider in cscDevices
+        {
+            if (( rider.paired ) == true )
+            {
+                selectedRiderIndex = loopCount
+                break
+            }
+            loopCount += 1
+        }
 
         //cadenceView.style = WMGaugeView.WMGaugeViewStyleFlatThin
-        cadenceView.setValue(90, animated: false)
+        cadenceView.setValue(10, animated: false)
         cadenceView.maxValue = 200.0
         cadenceView.scaleDivisions = 5
         cadenceView.scaleSubdivisions = 10

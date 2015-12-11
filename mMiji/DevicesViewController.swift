@@ -10,6 +10,9 @@ import UIKit
 import MBProgressHUD
 import CoreBluetooth
 
+var cscDevices: [CSCDevice] = cscData
+var pairedRiderIndex: Int = 0;
+
 class DevicesViewController: UIViewController,
                              UITableViewDataSource,
                              UITableViewDelegate,
@@ -29,6 +32,9 @@ class DevicesViewController: UIViewController,
     var prevWheelRev: UInt32 = 0
     var prevCrankRev: UInt32 = 0
     
+
+    
+    @IBOutlet weak var scanButton: UIButton!
     @IBAction func scanForDevices(sender: AnyObject) {
 
         if scanningState == false
@@ -36,6 +42,7 @@ class DevicesViewController: UIViewController,
             myCentralManager.scanForPeripheralsWithServices(nil, options: nil )   // call to scan for services
             printToMyTextView("\r scanning for Peripherals")
             scanningState = true
+            scanButton.titleLabel?.text = "Stop Scanning"
             
         }
         else
@@ -43,7 +50,7 @@ class DevicesViewController: UIViewController,
             myCentralManager.stopScan()   // stop scanning to save power
             scanningState = false
             printToMyTextView("stop scanning")
-            
+            scanButton.titleLabel?.text = "Scan for devices"
             if (peripheralArray.count > 0 ) {
                 myCentralManager.cancelPeripheralConnection(peripheralArray[0])
             }
@@ -51,7 +58,7 @@ class DevicesViewController: UIViewController,
     }
     
     
-    var cscDevices: [CSCDevice] = cscData
+    
     let cscCellID = "CSCDeivceCell"
     
     
@@ -139,18 +146,34 @@ class DevicesViewController: UIViewController,
         //        if peripheral?.name == "RedYoda"{  // Look for your device by Name
         
         if (advertisementData[CBAdvertisementDataLocalNameKey] != nil) {
-            myCentralManager.stopScan()  // stop scanning to save power
-            print("myCentralManager.stopScan()")
+//            myCentralManager.stopScan()  // stop scanning to save power
+//            print("myCentralManager.stopScan()")
             
             peripheralArray.append(peripheral) // add found device to device array to keep a strong reverence to it.
             updateStatusLabel("peripheralArray.append(peripheral)")
             
-            
-//            myCentralManager.connectPeripheral(peripheralArray[0], options: nil)  // connect to this found device
-            updateStatusLabel("myCentralManager.connectPeripheral(peripheralArray[0]")
-//            
-//            updateStatusLabel("Attempting to Connect to \(peripheral.name)  \r")
+            myCentralManager.connectPeripheral(peripheralArray[0], options: nil)  // connect to this found device
+//            updateStatusLabel("myCentralManager.connectPeripheral(peripheralArray[0]")
 //            printToMyTextView("Attempting to Connect to \(peripheral.name)  \r")
+            
+            
+            
+            // Need to check if we have seen this sensor already.
+            // And only add it IF it's not already in the list.
+            var found: Bool = false
+            for dev in cscDevices
+            {
+                if dev.name == peripheral.name { found = true; break;}
+            }
+            if found == false
+            {
+                let uuidDevice = peripheral.identifier.UUIDString
+                
+                var newSensor = CSCDevice(name:peripheral.name, macAddress:uuidDevice, paired:true)
+                cscDevices += [newSensor]
+            }
+            
+            tableView.reloadData()
             
         }
     }
@@ -166,6 +189,15 @@ class DevicesViewController: UIViewController,
         printToMyTextView("Scanning For Services")
         
         labelStatus.text = peripheral.name
+        for ( loop, var rider) in cscDevices.enumerate()
+        {
+            if rider.name == peripheral.name
+            {
+                rider.paired = true
+                pairedRiderIndex = loop
+                break
+            }
+        }
         
         //  peripheralArray.append(peripheral)
         
@@ -302,6 +334,10 @@ class DevicesViewController: UIViewController,
             prevWheelRev = wheelRev
             prevCrankEvt = crankEvt
             prevWheelEvt = wheelEvt
+            
+            cscDevices[pairedRiderIndex].wheelRevs = Int(wrevs)
+            
+            print("Wheel Revs update:\(wrevs)\r")
             
         }
     }
