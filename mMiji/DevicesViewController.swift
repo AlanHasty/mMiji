@@ -27,12 +27,11 @@ class DevicesViewController: UIViewController,
     var peripheralArray = [CBPeripheral]() // create now empty array.
     
     var scanningState: Bool = false
+    
     var prevCrankEvt: UInt32 = 0
     var prevWheelEvt: UInt32 = 0
     var prevWheelRev: UInt32 = 0
     var prevCrankRev: UInt32 = 0
-    
-
     
     @IBOutlet weak var scanButton: UIButton!
     @IBAction func scanForDevices(sender: AnyObject) {
@@ -57,10 +56,7 @@ class DevicesViewController: UIViewController,
         }
     }
     
-    
-    
     let cscCellID = "CSCDeivceCell"
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -234,8 +230,6 @@ class DevicesViewController: UIViewController,
         }
     }
     
-    
-    
     func peripheral(peripheral: CBPeripheral, didDiscoverCharacteristicsForService service: CBService, error: NSError?) {
         
         var enableValue = 1
@@ -255,8 +249,6 @@ class DevicesViewController: UIViewController,
         }
     }
     
-    
-    
     func peripheral(peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: NSError?) {
         
         print("readRSSI")
@@ -265,7 +257,6 @@ class DevicesViewController: UIViewController,
     func peripheralDidUpdateRSSI(peripheral: CBPeripheral, error: NSError?) {
         print("didUpdateRSSI")
     }
-    
     
     func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
         
@@ -279,40 +270,56 @@ class DevicesViewController: UIViewController,
         
         //     return [WheelRev, WheelEvt, CrankRev, CrankEvt]
         
+        //https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.csc_measurement.xml
+        
         
         if characteristic.UUID == CSCMeasurementDataUUID
         {
             var wheelData : [UInt32] = CSCTag.getCSCData(characteristic.value!)
             
-            var wheelRev = wheelData[0]
-            var wheelEvt = wheelData[1]
-            var crankRev = wheelData[2]
-            var crankEvt = wheelData[3]
+            let wheelRev = wheelData[0]
+            let wheelEvt = wheelData[1]
+            let crankRev = wheelData[2]
+            let crankEvt = wheelData[3]
+            var crevs: UInt32 = 0
+            var wrevs: UInt32 = 0
+            var adjustedCrankEvt: UInt32 = 0
+            var adjustedCrankRev: UInt32 = 0
+            var adjustedWheelEvt: UInt32 = 0
             
             print("Wheel Event \(wheelEvt) ms : Crank Event \(crankEvt) ms")
-            print("Wheel Revs \(wheelRev) : Crank Revs \(crankRev)")
+            print("Wheel Revs  \(wheelRev)    : Crank Revs  \(crankRev)")
             
             if crankEvt < prevCrankEvt
             {
-                crankEvt += 65535
+                adjustedCrankEvt += 65535
             }
-            let crankPeriod = crankEvt - prevCrankEvt
-            var crevs :UInt32
+            else
+            {
+                adjustedCrankEvt = crankEvt
+            }
+            let crankPeriod = adjustedCrankEvt - prevCrankEvt
+
+            if crankRev < prevCrankRev { adjustedCrankRev = crankRev + 65535 }
+            else { adjustedCrankRev = crankRev }
+            
+            
             if crankPeriod > 0 {
-                crevs = (crankRev - prevCrankRev) * 60000 / crankPeriod
+                crevs = (adjustedCrankRev - prevCrankRev) * 60000 / crankPeriod
             }
             else {
                 crevs = 0
             }
             
-            
+
             if wheelEvt < prevWheelEvt
             {
-                wheelEvt += 65535
+                adjustedWheelEvt += 65535
             }
+            else { adjustedWheelEvt = wheelEvt }
             
-            let wheelPeriod = wheelEvt - prevWheelEvt
-            var wrevs : UInt32 = 0
+            let wheelPeriod = adjustedWheelEvt - prevWheelEvt
+            
             
             if wheelPeriod > 0
             {
@@ -323,21 +330,15 @@ class DevicesViewController: UIViewController,
                 wrevs = 0
             }
             
-//            if wrevs > 300 {wheelRevs.text = "Wooh"}
-//            else { wheelRevs.text = "\(wrevs)"}
-//            
-//            if crevs > 300 { crankRevs.text = "Woow"}
-//            else { crankRevs.text = "\(crevs)" }
-//            println("Cadence: \(crevs) rpm \tWheel: \(wrevs) rpm")
-            
             prevCrankRev = crankRev
             prevWheelRev = wheelRev
             prevCrankEvt = crankEvt
             prevWheelEvt = wheelEvt
             
             cscDevices[pairedRiderIndex].wheelRevs = Int(wrevs)
+            cscDevices[pairedRiderIndex].crankRevs = Int(crevs)
             
-            print("Wheel Revs update:\(wrevs)\r")
+            print("Crank Revs:\(crevs): Wh Revs:\(wrevs)\r")
             
         }
     }
