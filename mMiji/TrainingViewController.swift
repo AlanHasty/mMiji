@@ -65,19 +65,6 @@ class TrainingViewController: UIViewController {
     
   
     @IBOutlet weak var cadenceView: WMGaugeView!
-   
-    @IBOutlet weak var contentView: UIView!
-    
-    @IBAction func startHUD(sender: AnyObject) {
-//        var hud = MBProgressHUD.showHUDAddedTo(contentView, animated: true)
-//        hud.labelText = " 5 "
-//        hud.labelColor = UIColor.redColor()
-//        contentView.hidden = false
-
-        
-    }
-    
-
     
     func manageTicks() {
         wkoutTimers.workoutTime += 1
@@ -90,25 +77,9 @@ class TrainingViewController: UIViewController {
         {
             wkoutTimers.intervalTime = 0
         }
-        
       
         let newVal = Float(cscDevices[pairedRiderIndex].wheelRevs)
         cadenceView.setValue(newVal, animated: false)
-//        if Bool(wkoutTimers.workoutTime % 2)
-//        
-//            
-//            
-//            //newVal = Float(localCadence + 5)
-//            
-//            cadenceView.setValue(newVal, animated: false)
-//        }
-//        else
-//        {
-//            newVal = Float(localCadence - 5)
-//            cadenceView.setValue(newVal, animated: false)
-//            //cadenceView.currentLevel
-//        }
-    
     }
     
     func intervalTime()
@@ -176,8 +147,6 @@ class TrainingViewController: UIViewController {
         
         if wkoutTimers.effortTime < 5  && hudShowing == false {
             hudShowing = true;
-            hud.hidden = false;
-            hud.show(true)
         }
     }
     
@@ -207,10 +176,7 @@ class TrainingViewController: UIViewController {
             if wkoutIndex < hardwork.tonightsWorkout.efforts.count {
                 updateCurrentEfffortLine(wkoutIndex)
                 updateNextEffortLine(wkoutIndex)
-                
-                hud.hidden = false
-                
-                hud.hide(true)
+
                 hudShowing = false
                 
             }
@@ -312,20 +278,6 @@ class TrainingViewController: UIViewController {
         updateCurrentEfffortLine(wkoutIndex)
         updateNextEffortLine(wkoutIndex)
         updateEffortTimerText()
-        
-        hud = MBProgressHUD.showHUDAddedTo(contentView, animated: true)
-        hud.labelText = " 5 "
-        hud.labelColor = UIColor.redColor()
-        hud.hidden = false
-        hud.show(true)
-        
-//        countdownView.hidden = true
-//        countdownView.backgroundAlpha = 0.5
-//        countdownView.countdownColor = UIColor.redColor()
-//        countdownView.countdownFrom = 5
-//        countdownView.updateAppearance()
-        
-        contentView.hidden = true
         
         var loopCount = 0
         for rider in cscDevices
