@@ -22,7 +22,6 @@
 		E7637E6D1BF3765300A04107 /* CSCDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E6B1BF3765300A04107 /* CSCDeviceCell.swift */; };
 		E7637E6E1BF3765300A04107 /* CSCDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E6B1BF3765300A04107 /* CSCDeviceCell.swift */; };
 		E79534621BDA499A00C1C93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79534611BDA499A00C1C93C /* AppDelegate.swift */; };
-		E79534641BDA499A00C1C93C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79534631BDA499A00C1C93C /* ViewController.swift */; };
 		E79534671BDA499A00C1C93C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79534651BDA499A00C1C93C /* Main.storyboard */; };
 		E79534691BDA499A00C1C93C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79534681BDA499A00C1C93C /* Assets.xcassets */; };
 		E795346C1BDA499A00C1C93C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E795346A1BDA499A00C1C93C /* LaunchScreen.storyboard */; };
@@ -175,7 +174,6 @@
 		E7637E6B1BF3765300A04107 /* CSCDeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSCDeviceCell.swift; path = ../CSCDeviceCell.swift; sourceTree = "<group>"; };
 		E795345E1BDA499A00C1C93C /* mMiji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mMiji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79534611BDA499A00C1C93C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E79534631BDA499A00C1C93C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E79534661BDA499A00C1C93C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E79534681BDA499A00C1C93C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E795346B1BDA499A00C1C93C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -301,7 +299,6 @@
 				E702DC801C15B56700273EB8 /* SpeedAndCadence.swift */,
 				E7AF370A1C0A5B490024F218 /* TrainingViewController.swift */,
 				E79534611BDA499A00C1C93C /* AppDelegate.swift */,
-				E79534631BDA499A00C1C93C /* ViewController.swift */,
 				E79534651BDA499A00C1C93C /* Main.storyboard */,
 				E79534681BDA499A00C1C93C /* Assets.xcassets */,
 				E795346A1BDA499A00C1C93C /* LaunchScreen.storyboard */,
@@ -678,7 +675,6 @@
 			files = (
 				E7AF370B1C0A5B490024F218 /* TrainingViewController.swift in Sources */,
 				E702DC811C15B56700273EB8 /* SpeedAndCadence.swift in Sources */,
-				E79534641BDA499A00C1C93C /* ViewController.swift in Sources */,
 				E7637E681BEA2AFF00A04107 /* DevicesViewController.swift in Sources */,
 				E7637E641BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */,
 				E729B3381BE0E9B80083D163 /* CSCDeviceData.swift in Sources */,
