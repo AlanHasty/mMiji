@@ -80,26 +80,7 @@ class CSCTag {
         }
         return false
     }
-    
-    
-//    // Get labels of all sensors
-//    class func getSensorLabels () -> [String] {
-//        let sensorLabels : [String] = [
-//            "Ambient Temperature",
-//            "Object Temperature",
-//            "Accelerometer X",
-//            "Accelerometer Y",
-//            "Accelerometer Z",
-//            "Relative Humidity",
-//            "Magnetometer X",
-//            "Magnetometer Y",
-//            "Magnetometer Z",
-//            "Gyroscope X",
-//            "Gyroscope Y",
-//            "Gyroscope Z"
-//        ]
-//        return sensorLabels
-//    }
+
     
     class func dataToSignedBytes8(value : NSData) -> [Int8] {
         let count = value.length
