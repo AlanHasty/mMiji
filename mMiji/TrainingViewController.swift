@@ -153,15 +153,14 @@ class TrainingViewController: UIViewController {
         }
     
     }
+    
     func showCountdownOverlay()
     {
-        cdOverlay = SFCountdownView(frame: self.view.frame)
         cdOverlay!.backgroundAlpha = 0.5
         cdOverlay!.countdownColor = UIColor.redColor()
         cdOverlay!.updateAppearance()
         view.addSubview(cdOverlay!)
         cdOverlay!.start()
-        
         hudShowing = true;
     }
     
@@ -246,6 +245,16 @@ class TrainingViewController: UIViewController {
             nextEffortStr.text = String(nextEffortStruct.duration)
             nextGearStr.text = nextEffortStruct.gear
             nextDescStr.text = nextEffortStruct.desc
+            if curEffortStruct.intervals.count >  0
+            {
+                cdOverlay!.finishText = curEffortStruct.gear
+            }
+            else
+            {
+                cdOverlay!.finishText = nextEffortStruct.gear
+            }
+            
+            cdOverlay!.updateAppearance()
         }
         else
         {
@@ -254,7 +263,7 @@ class TrainingViewController: UIViewController {
             nextEffortStr.text = ""
             nextGearStr.text = ""
             nextDescStr.text = ""
-
+            cdOverlay?.finishText = "Done"
         }
     }
     
@@ -299,7 +308,7 @@ class TrainingViewController: UIViewController {
         super.viewDidLoad()
        // Do any additional setup after loading the view.
         hardwork = WorkoutPPP(workoutSelection: tonightsWorkoutStr)
-        
+        cdOverlay = SFCountdownView(frame: self.view.frame)
         print(hardwork)
         WorkoutName.text = String("Workout #\(hardwork.tonightsWorkout.name)")
         wkoutIndex = 0
@@ -317,6 +326,8 @@ class TrainingViewController: UIViewController {
             }
             loopCount += 1
         }
+        
+
 
 
         //cadenceView.style = WMGaugeView.WMGaugeViewStyleFlatThin
