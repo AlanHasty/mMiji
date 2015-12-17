@@ -9,8 +9,6 @@
 import UIKit
 import Foundation
 import CoreGraphics
-
-import MBProgressHUD
 import WMGaugeView
 import SFCountdownView
 
@@ -27,15 +25,12 @@ class TrainingViewController: UIViewController {
     var tonightsWorkout = 999
     
     var runningTimer = NSTimer()
-    
     var wkoutTimers: Timers = Timers()
     
-    var timerSpeed: Float = 0.1 // Change this to 1.0 if you want proper time
+    var timerSpeed: Double = 0.2 // Change this to 1.0 if you want proper time
     var selectedRiderIndex: Int = 0
     var wkoutIndex = 0
     var hardwork: WorkoutPPP = WorkoutPPP()
-
-    var hud: MBProgressHUD =  MBProgressHUD()
     
     var hudShowing: Bool = false
     var pingPong:Bool = false
@@ -63,6 +58,9 @@ class TrainingViewController: UIViewController {
         // This will get us back I think!
     }
     
+    @IBAction func startHUD(sender: AnyObject) {
+        print("Button Pressed")
+    }
   
     @IBOutlet weak var cadenceView: WMGaugeView!
     
@@ -242,7 +240,7 @@ class TrainingViewController: UIViewController {
         // Here we go..
         if ( workoutRunning == OperationState.NotStarted)
         {
-            runningTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "manageTimersAndUpdateWorkout",
+            runningTimer = NSTimer.scheduledTimerWithTimeInterval(timerSpeed, target: self, selector: "manageTimersAndUpdateWorkout",
                 userInfo: nil, repeats: true)
             workoutRunning = OperationState.Running
 
@@ -258,7 +256,7 @@ class TrainingViewController: UIViewController {
             }
             else if workoutRunning == OperationState.Paused
             {
-                runningTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "manageTimersAndUpdateWorkout",
+                runningTimer = NSTimer.scheduledTimerWithTimeInterval(timerSpeed, target: self, selector: "manageTimersAndUpdateWorkout",
                     userInfo: nil, repeats: true)
                 workoutRunning = OperationState.Running
                 sender.setTitle("Pause", forState: UIControlState.Normal)

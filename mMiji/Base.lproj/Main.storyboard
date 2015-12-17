@@ -265,7 +265,7 @@
                                 <rect key="frame" x="87" y="560" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="startHUD:" destination="iWU-Sr-fVl" eventType="touchUpInside" id="mWg-85-nie"/>
+                                    <action selector="startHUD:" destination="iWU-Sr-fVl" eventType="touchUpInside" id="SmC-fl-CEW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbv-qp-vPw" userLabel="intervalEffort">
