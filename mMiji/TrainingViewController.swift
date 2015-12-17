@@ -27,13 +27,15 @@ class TrainingViewController: UIViewController {
     var runningTimer = NSTimer()
     var wkoutTimers: Timers = Timers()
     
-    var timerSpeed: Double = 0.2 // Change this to 1.0 if you want proper time
+    var timerSpeed: Double = 1.0 // Change this to 1.0 if you want proper time
     var selectedRiderIndex: Int = 0
     var wkoutIndex = 0
     var hardwork: WorkoutPPP = WorkoutPPP()
     
     var hudShowing: Bool = false
     var pingPong:Bool = false
+    
+    
     
     @IBOutlet weak var WorkoutName: UILabel!
     
@@ -50,6 +52,8 @@ class TrainingViewController: UIViewController {
     @IBOutlet weak var nextEffortStr: UILabel!
     @IBOutlet weak var nextGearStr: UILabel!
     @IBOutlet weak var nextDescStr: UILabel!
+
+    var cdOverlay:SFCountdownView?
     
     var curEffortStruct =  Effort(duration: 2.0, finishTime: 58.0, gear:"B17", desc:"Test", intervals: [])
     var nextEffortStruct = Effort(duration:4.00, finishTime: 62.0, gear: "S15",desc: "Spin doctor", intervals: [])
@@ -60,6 +64,13 @@ class TrainingViewController: UIViewController {
     
     @IBAction func startHUD(sender: AnyObject) {
         print("Button Pressed")
+
+        cdOverlay = SFCountdownView(frame: self.view.frame)
+        cdOverlay!.backgroundAlpha = 0.5
+        view.addSubview(cdOverlay!)
+        cdOverlay!.countdownColor = UIColor.redColor()
+        cdOverlay!.updateAppearance()
+        cdOverlay!.start()
     }
   
     @IBOutlet weak var cadenceView: WMGaugeView!
@@ -85,6 +96,10 @@ class TrainingViewController: UIViewController {
         let iMin = wkoutTimers.intervalTime / 60
         let iSec = wkoutTimers.intervalTime % 60
         intervalTimerString.text = String(format: "%.2d:%.2d",iMin, iSec)
+        if wkoutTimers.intervalTime == 5 && hudShowing == false
+        {
+            showCountdownOverlay()
+        }
     
     }
     
@@ -108,6 +123,8 @@ class TrainingViewController: UIViewController {
                 intervalTimerString.hidden = false
                 intervalTextString.hidden = false
                 intervalTimerDesc.hidden = false
+                cdOverlay?.removeFromSuperview()
+                hudShowing = false
                 if ( pingPong == true )
                 {
                     intervalTextString.text = currentEffort.intervals[1].intString
@@ -123,6 +140,7 @@ class TrainingViewController: UIViewController {
                     intervalTime()
                     print("Setting Interval Time = \(wkoutTimers.intervalTime)")
                     pingPong = true
+
                 }
             }
         }
@@ -135,6 +153,17 @@ class TrainingViewController: UIViewController {
         }
     
     }
+    func showCountdownOverlay()
+    {
+        cdOverlay = SFCountdownView(frame: self.view.frame)
+        cdOverlay!.backgroundAlpha = 0.5
+        cdOverlay!.countdownColor = UIColor.redColor()
+        cdOverlay!.updateAppearance()
+        view.addSubview(cdOverlay!)
+        cdOverlay!.start()
+        
+        hudShowing = true;
+    }
     
     func updateEffortTimerText()
     {
@@ -143,8 +172,8 @@ class TrainingViewController: UIViewController {
         
         effortTimerString.text = String(format: "%.2d:%.2d",effMin, effSec)
         
-        if wkoutTimers.effortTime < 5  && hudShowing == false {
-            hudShowing = true;
+        if wkoutTimers.effortTime == 5  && hudShowing == false {
+            showCountdownOverlay()
         }
     }
     
@@ -171,12 +200,13 @@ class TrainingViewController: UIViewController {
         
         if isEndOfEffort() {
             wkoutIndex++
+            cdOverlay?.removeFromSuperview()
+            hudShowing = false
             if wkoutIndex < hardwork.tonightsWorkout.efforts.count {
                 updateCurrentEfffortLine(wkoutIndex)
                 updateNextEffortLine(wkoutIndex)
-
-                hudShowing = false
                 
+                pingPong = false
             }
             else
             {
@@ -287,6 +317,7 @@ class TrainingViewController: UIViewController {
             }
             loopCount += 1
         }
+
 
         //cadenceView.style = WMGaugeView.WMGaugeViewStyleFlatThin
         cadenceView.setValue(10, animated: false)
