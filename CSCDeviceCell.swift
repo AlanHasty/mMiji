@@ -14,13 +14,29 @@ class CSCDeviceCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var macAddressLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var cadenceLabel: UILabel!
+    @IBOutlet weak var rpmLabel: UILabel!
+    
     
     var device: CSCDevice! {
         didSet {
             nameLabel.text = device.name
-            macAddressLabel.text = device.macAddress
+            macAddressLabel.text = device.uid
             statusLabel.text = device.status
-            //ratingImageView.image = imageForRating(player.rating)
+            if device.paired
+            {
+                cadenceLabel.text = String(device.crankRevs)
+                cadenceLabel.hidden = false
+                rpmLabel.text = String(device.wheelRevs)
+                rpmLabel.hidden = false
+            }
+            else
+            {
+                cadenceLabel.hidden = true
+                cadenceLabel.text = ""
+                rpmLabel.hidden = true
+                rpmLabel.text = ""
+            }
         }
     }
     
