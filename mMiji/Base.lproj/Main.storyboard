@@ -19,8 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mua-9N-Lu5">
-                                <rect key="frame" x="20" y="505" width="150" height="29"/>
-                                <state key="normal" title="Scan for devices"/>
+                                <rect key="frame" x="20" y="488" width="90" height="29"/>
+                                <color key="backgroundColor" red="0.20291601379999999" green="0.32064824730000002" blue="0.92108950410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="scanForDevices:" destination="H9r-gS-A8x" eventType="touchUpInside" id="07d-t4-JMv"/>
                                 </connections>
@@ -40,7 +43,7 @@
                                                     <rect key="frame" x="15" y="8" width="115" height="113"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dVJ-5E-Bhd">
-                                                    <rect key="frame" x="147" y="8" width="137" height="63"/>
+                                                    <rect key="frame" x="147" y="8" width="137" height="105"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-ZJ-6CS">
                                                             <rect key="frame" x="0.0" y="0.0" width="84" height="21"/>
@@ -60,13 +63,27 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBk-pc-M5Y">
+                                                            <rect key="frame" x="0.0" y="63" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-Lo-WG4" userLabel="cadenceLabel">
+                                                            <rect key="frame" x="0.0" y="84" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cadenceLabel" destination="DRE-Lo-WG4" id="HqY-ni-OrR"/>
                                             <outlet property="macAddressLabel" destination="Xcp-UO-5GU" id="CVe-Id-NPs"/>
                                             <outlet property="nameLabel" destination="VGY-ZJ-6CS" id="3as-H8-dXk"/>
+                                            <outlet property="rpmLabel" destination="yBk-pc-M5Y" id="gEZ-Ee-NM4"/>
                                             <outlet property="statusLabel" destination="oN1-eu-VzZ" id="WuV-eT-JCK"/>
                                         </connections>
                                     </tableViewCell>
@@ -82,6 +99,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yd-p9-e2F" userLabel="Connect">
+                                <rect key="frame" x="20" y="519" width="90" height="24"/>
+                                <color key="backgroundColor" red="0.245078041" green="1" blue="0.49323913060000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="ConnectDevice:" destination="H9r-gS-A8x" eventType="touchUpInside" id="A05-Sy-2kt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

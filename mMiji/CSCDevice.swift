@@ -11,16 +11,18 @@ import UIKit
 
 struct CSCDevice {
     var macAddress: String?
+    var uid: String?
     var name: String?
-    var paired: Bool?
+    var paired: Bool
     var status: String?
     var wheelRevs: Int
-    var crankRevs: Int?
+    var crankRevs: Int
     
-    init(name:String?, macAddress:String?, paired: Bool?) {
+    init(name:String?, uid:String?, paired: Bool) {
         self.name = name
-        self.macAddress = macAddress
+        self.macAddress = "bloody Apple"
         self.paired = paired
+        self.uid = uid
         self.status = "unknown"
         self.wheelRevs = 60
         self.crankRevs = 0
