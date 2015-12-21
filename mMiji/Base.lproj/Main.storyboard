@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mua-9N-Lu5">
-                                <rect key="frame" x="20" y="488" width="90" height="29"/>
+                                <rect key="frame" x="20" y="488" width="137" height="29"/>
                                 <color key="backgroundColor" red="0.20291601379999999" green="0.32064824730000002" blue="0.92108950410000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Scan">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -100,7 +100,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yd-p9-e2F" userLabel="Connect">
-                                <rect key="frame" x="20" y="519" width="90" height="24"/>
+                                <rect key="frame" x="20" y="519" width="137" height="24"/>
                                 <color key="backgroundColor" red="0.245078041" green="1" blue="0.49323913060000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Connect"/>
@@ -114,7 +114,7 @@
                     <navigationItem key="navigationItem" id="7wI-k8-i2k"/>
                     <connections>
                         <outlet property="labelStatus" destination="YP0-op-Dyx" id="23T-n9-0fz"/>
-                        <outlet property="scanButton" destination="mua-9N-Lu5" id="TsT-l6-Sg9"/>
+                        <outlet property="scanBtnText" destination="mua-9N-Lu5" id="ipr-ZQ-Kzy"/>
                         <outlet property="tableView" destination="jNd-wu-y3W" id="PfQ-r7-9JH"/>
                     </connections>
                 </viewController>

@@ -12,6 +12,10 @@
 		E702DC811C15B56700273EB8 /* SpeedAndCadence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702DC801C15B56700273EB8 /* SpeedAndCadence.swift */; };
 		E729B3361BE0E7BD0083D163 /* CSCDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729B3351BE0E7BD0083D163 /* CSCDevice.swift */; };
 		E729B3381BE0E9B80083D163 /* CSCDeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729B3371BE0E9B80083D163 /* CSCDeviceData.swift */; };
+		E73D2BFA1C27709600FEF6A9 /* CSCDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729B3351BE0E7BD0083D163 /* CSCDevice.swift */; };
+		E73D2BFB1C2770A300FEF6A9 /* CSCDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729B3351BE0E7BD0083D163 /* CSCDevice.swift */; };
+		E73D2BFC1C2770A800FEF6A9 /* SpeedAndCadence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702DC801C15B56700273EB8 /* SpeedAndCadence.swift */; };
+		E73D2BFD1C2770A800FEF6A9 /* SpeedAndCadence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702DC801C15B56700273EB8 /* SpeedAndCadence.swift */; };
 		E7637E641BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */; };
 		E7637E651BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */; };
 		E7637E661BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */; };
@@ -689,6 +693,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E73D2BFA1C27709600FEF6A9 /* CSCDevice.swift in Sources */,
+				E73D2BFC1C2770A800FEF6A9 /* SpeedAndCadence.swift in Sources */,
 				E7637E691BEA2AFF00A04107 /* DevicesViewController.swift in Sources */,
 				E79534771BDA499A00C1C93C /* mMijiTests.swift in Sources */,
 				E7637E651BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */,
@@ -700,6 +706,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E73D2BFB1C2770A300FEF6A9 /* CSCDevice.swift in Sources */,
+				E73D2BFD1C2770A800FEF6A9 /* SpeedAndCadence.swift in Sources */,
 				E7637E6A1BEA2AFF00A04107 /* DevicesViewController.swift in Sources */,
 				E79534821BDA499A00C1C93C /* mMijiUITests.swift in Sources */,
 				E7637E661BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */,

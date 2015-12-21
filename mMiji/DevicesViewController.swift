@@ -10,7 +10,7 @@ import UIKit
 import MBProgressHUD
 import CoreBluetooth
 
-var cscDevices: [CSCDevice] = cscData
+var cscDevices = [CSCDevice]()
 var pairedRiderIndex: Int = 0;
 
 class DevicesViewController: UIViewController,
@@ -32,34 +32,39 @@ class DevicesViewController: UIViewController,
     var prevWheelEvt: UInt32 = 0
     var prevWheelRev: UInt32 = 0
     var prevCrankRev: UInt32 = 0
+
+    var firstTime: Bool = true;
     
-    @IBOutlet weak var scanButton: UIButton!
+    @IBOutlet weak var scanBtnText: UIButton!
     @IBAction func scanForDevices(sender: AnyObject) {
 
         if scanningState == false
         {
             myCentralManager.scanForPeripheralsWithServices(nil, options: nil )   // call to scan for services
-            printToMyTextView("\r scanning for Peripherals")
             scanningState = true
-            scanButton.titleLabel?.text = "Stop Scanning"
-            
+            scanBtnText.setTitle("Stop Scanning", forState: UIControlState.Normal)
         }
         else
         {
             myCentralManager.stopScan()   // stop scanning to save power
             scanningState = false
-            printToMyTextView("stop scanning")
-            scanButton.titleLabel?.text = "Scan for devices"
-            if (peripheralArray.count > 0 ) {
-                myCentralManager.cancelPeripheralConnection(peripheralArray[0])
-            }
+            scanBtnText.setTitle("Scan", forState: UIControlState.Normal)
+
+//            if (peripheralArray.count > 0 ) {
+//                myCentralManager.cancelPeripheralConnection(peripheralArray[0])
+//            }
         }
     }
     
     let cscCellID = "CSCDeivceCell"
     
     @IBAction func ConnectDevice(sender: AnyObject) {
-        
+        let sensor = cscDevices[pairedRiderIndex]
+        myCentralManager.connectPeripheral(peripheralArray[pairedRiderIndex], options: nil)
+        printToMyTextView("Trying device: \(sensor.uid)\r")
+        // Stop scanning if you are going to connect
+        let falseButton = UIButton()
+        scanForDevices(falseButton)
     }
     
     override func viewDidLoad() {
@@ -67,22 +72,7 @@ class DevicesViewController: UIViewController,
         
         myCentralManager = CBCentralManager(delegate: self, queue: dispatch_get_main_queue())
 
-
-        // Do any additional setup after loading the view.
-        //tableView.delegate = self
-        //tableView.dataSource = self
-        
-        //tableView.registerClass(CSCDeviceCell.self, forCellReuseIdentifier: cscCellID)
     }
-    
-//    // Put CentralManager in the main queue
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        labelStatus.text = "None found"
-//        myCentralManager = CBCentralManager(delegate: self, queue: dispatch_get_main_queue())
-//        
-//    }
-    
 
     // Mark   CBCentralManager Methods
     
@@ -144,18 +134,13 @@ class DevicesViewController: UIViewController,
         }
         
         if (advertisementData[CBAdvertisementDataLocalNameKey] != nil) {
-//            myCentralManager.stopScan()  // stop scanning to save power
+
+            //            myCentralManager.stopScan()  // stop scanning to save power
 //            print("myCentralManager.stopScan()")
-            
-            peripheralArray.append(peripheral) // add found device to device array to keep a strong reverence to it.
-            updateStatusLabel("peripheralArray.append(peripheral)")
-            
 //            myCentralManager.connectPeripheral(peripheralArray[0], options: nil)  // connect to this found device
 //            updateStatusLabel("myCentralManager.connectPeripheral(peripheralArray[0]")
 //            printToMyTextView("Attempting to Connect to \(peripheral.name)  \r")
-            
-            
-            
+
             // Need to check if we have seen this sensor already.
             // And only add it IF it's not already in the list.
             var found: Bool = false
@@ -166,7 +151,8 @@ class DevicesViewController: UIViewController,
             if found == false
             {
                 let uuidDevice = peripheral.identifier.UUIDString
-                
+                peripheralArray.append(peripheral) // add found device to device array to keep a strong reverence to it.
+                updateStatusLabel("peripheralArray.append(peripheral)")
                 var newSensor = CSCDevice(name:peripheral.name, uid:uuidDevice, paired:false)
                 cscDevices += [newSensor]
             }
@@ -187,18 +173,6 @@ class DevicesViewController: UIViewController,
         printToMyTextView("Scanning For Services")
         
         labelStatus.text = peripheral.name
-        for ( loop, var rider) in cscDevices.enumerate()
-        {
-            if rider.name == peripheral.name
-            {
-                rider.paired = true
-                pairedRiderIndex = loop
-                break
-            }
-        }
-        
-        //  peripheralArray.append(peripheral)
-        
     }
     
     func centralManager(central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: NSError?) {
@@ -218,24 +192,13 @@ class DevicesViewController: UIViewController,
                 // Discover characteristics of all valid services
                 peripheral.discoverCharacteristics(nil, forService: service)
             }
-            
-            
-            //            if service.UUID.UUIDString == "180F"{
-            //                printToMyTextView("------ FOUND BATT service.")
-            //                peripheral.discoverCharacteristics(nil, forService: service)
-            //            }
-            //
-            //            if service.UUID.UUIDString == "1816" {
-            //                printToMyTextView("____ Found Cycling Speed and Cadence\r")
-            //                peripheral.discoverCharacteristics(nil, forService: service)
-            //            }
         }
     }
     
     func peripheral(peripheral: CBPeripheral, didDiscoverCharacteristicsForService service: CBService, error: NSError?) {
         
-        var enableValue = 1
-        let enablyBytes = NSData(bytes: &enableValue, length: sizeof(UInt8))
+        //var enableValue = 1
+        //let enablyBytes = NSData(bytes: &enableValue, length: sizeof(UInt8))
         
         printToMyTextView("DidDiscoverCharacteristicsForService:  Service.UUID \(service.UUID)  UUIDString \(service.UUID.UUIDString)\r")
         printToMyTextView("Enabling sensors")
@@ -249,6 +212,9 @@ class DevicesViewController: UIViewController,
                 peripheral.setNotifyValue(true, forCharacteristic: characteristic)
             }
         }
+        // find this peripheral and change the table entry to show the change in it's status
+        cscDevices[pairedRiderIndex].status = "Paired"
+        cscDevices[pairedRiderIndex].paired = true
     }
     
     func peripheral(peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: NSError?) {
@@ -261,6 +227,7 @@ class DevicesViewController: UIViewController,
     }
     
     func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
+
         
         printToMyTextView("  Read Char Property:Value: \(characteristic.properties):\(characteristic.value)\r")
         
@@ -322,6 +289,11 @@ class DevicesViewController: UIViewController,
             
             let wheelPeriod = adjustedWheelEvt - prevWheelEvt
             
+            if firstTime == true
+            {
+                firstTime = false
+                prevWheelRev = wheelRev
+            }
             
             if wheelPeriod > 0
             {
@@ -341,7 +313,7 @@ class DevicesViewController: UIViewController,
             cscDevices[pairedRiderIndex].crankRevs = Int(crevs)
             
             print("Crank Revs:\(crevs): Wh Revs:\(wrevs)\r")
-            
+            tableView.reloadData()
         }
     }
     
@@ -360,9 +332,7 @@ class DevicesViewController: UIViewController,
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cscDevices.count
     }
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//    }
+
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cscCellID, forIndexPath: indexPath) as! CSCDeviceCell
@@ -371,17 +341,7 @@ class DevicesViewController: UIViewController,
         let row = indexPath.row
         let device = cscDevices[row]
         
-        cell.device = device  //
-//        cell.name.text = device.name
-//        cell.status.text = device.status
-//
-        
-        
-        //cell.macAddress.text = device.macAddress
-        
-        //cell?.textLabel!.text = cscDevices[row].name
-        //cell?.detailTextLabel!.text = cscDevices[row].macAddress
-        
+        cell.device = device
         return cell
     }
     
@@ -389,25 +349,28 @@ class DevicesViewController: UIViewController,
         
         var sensor = cscDevices[indexPath.row]
         
+        pairedRiderIndex = indexPath.row
+        printToMyTextView("Selected device: \(sensor.uid), pairedRiderIndex:\(pairedRiderIndex)\r")
+        
         //myCentralManager.connectPeripheral(peripheralArray[0], options: nil)
         
         
-        var found: Bool = false
-        var loop: Int = 0
-        for perif in peripheralArray
-        {
-            if sensor.uid == perif.identifier.UUIDString
-            {
-                found = true
-                break
-            }
-            loop += 1
-        }
-        if found
-        {
-            myCentralManager.connectPeripheral(peripheralArray[loop], options: nil)
-            printToMyTextView("Trying device: \(sensor.uid)\r")
-        }
+//        var found: Bool = false
+//        var loop: Int = 0
+//        for perif in peripheralArray
+//        {
+//            if sensor.uid == perif.identifier.UUIDString
+//            {
+//                found = true
+//                break
+//            }
+//            loop += 1
+//        }
+//        if found
+//        {
+//            myCentralManager.connectPeripheral(peripheralArray[loop], options: nil)
+//            printToMyTextView("Trying device: \(sensor.uid)\r")
+//        }
     }
     
 
