@@ -61,17 +61,6 @@ class TrainingViewController: UIViewController {
     @IBAction func returnToWorkoutSelction(segue:UIStoryboardSegue) {
         // This will get us back I think!
     }
-    
-    @IBAction func startHUD(sender: AnyObject) {
-        print("Button Pressed")
-
-        cdOverlay = SFCountdownView(frame: self.view.frame)
-        cdOverlay!.backgroundAlpha = 0.5
-        view.addSubview(cdOverlay!)
-        cdOverlay!.countdownColor = UIColor.redColor()
-        cdOverlay!.updateAppearance()
-        cdOverlay!.start()
-    }
   
     @IBOutlet weak var cadenceView: WMGaugeView!
     

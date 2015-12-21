@@ -287,13 +287,6 @@
                                     <action selector="startTonightsWorkout:" destination="iWU-Sr-fVl" eventType="touchUpInside" id="8WM-Z9-l2W"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts8-Uw-fUO">
-                                <rect key="frame" x="87" y="560" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="startHUD:" destination="iWU-Sr-fVl" eventType="touchUpInside" id="SmC-fl-CEW"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbv-qp-vPw" userLabel="intervalEffort">
                                 <rect key="frame" x="209" y="261" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -316,8 +309,6 @@
                             <constraint firstItem="veK-0O-b5H" firstAttribute="leading" secondItem="vRc-mu-Hxe" secondAttribute="leadingMargin" constant="-20" id="AEa-QM-7a7"/>
                             <constraint firstItem="veK-0O-b5H" firstAttribute="top" secondItem="gSM-iP-jBg" secondAttribute="bottom" constant="27" id="DMg-AT-80U"/>
                             <constraint firstItem="Dje-MA-zqi" firstAttribute="leading" secondItem="vRc-mu-Hxe" secondAttribute="leading" constant="12" id="G7r-7s-Rty"/>
-                            <constraint firstItem="ts8-Uw-fUO" firstAttribute="leading" secondItem="Dje-MA-zqi" secondAttribute="trailing" constant="41" id="K4J-Hj-01i"/>
-                            <constraint firstItem="JSV-sd-JL7" firstAttribute="top" secondItem="ts8-Uw-fUO" secondAttribute="bottom" constant="10" id="VlX-pu-8ZT"/>
                             <constraint firstItem="JSV-sd-JL7" firstAttribute="top" secondItem="Dje-MA-zqi" secondAttribute="bottom" constant="10" id="bAc-Qa-7pp"/>
                             <constraint firstItem="veK-0O-b5H" firstAttribute="leading" secondItem="vRc-mu-Hxe" secondAttribute="leadingMargin" constant="-20" id="l3y-cc-7Wf"/>
                             <constraint firstItem="HJe-k7-v5W" firstAttribute="leading" secondItem="veK-0O-b5H" secondAttribute="trailing" constant="33" id="x9m-PV-yCR"/>
