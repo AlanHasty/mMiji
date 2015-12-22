@@ -22,9 +22,6 @@
 		E7637E681BEA2AFF00A04107 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E671BEA2AFF00A04107 /* DevicesViewController.swift */; };
 		E7637E691BEA2AFF00A04107 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E671BEA2AFF00A04107 /* DevicesViewController.swift */; };
 		E7637E6A1BEA2AFF00A04107 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E671BEA2AFF00A04107 /* DevicesViewController.swift */; };
-		E7637E6C1BF3765300A04107 /* CSCDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E6B1BF3765300A04107 /* CSCDeviceCell.swift */; };
-		E7637E6D1BF3765300A04107 /* CSCDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E6B1BF3765300A04107 /* CSCDeviceCell.swift */; };
-		E7637E6E1BF3765300A04107 /* CSCDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E6B1BF3765300A04107 /* CSCDeviceCell.swift */; };
 		E79534621BDA499A00C1C93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79534611BDA499A00C1C93C /* AppDelegate.swift */; };
 		E79534671BDA499A00C1C93C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79534651BDA499A00C1C93C /* Main.storyboard */; };
 		E79534691BDA499A00C1C93C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79534681BDA499A00C1C93C /* Assets.xcassets */; };
@@ -175,7 +172,6 @@
 		E729B3371BE0E9B80083D163 /* CSCDeviceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCDeviceData.swift; sourceTree = "<group>"; };
 		E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		E7637E671BEA2AFF00A04107 /* DevicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
-		E7637E6B1BF3765300A04107 /* CSCDeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSCDeviceCell.swift; path = ../CSCDeviceCell.swift; sourceTree = "<group>"; };
 		E795345E1BDA499A00C1C93C /* mMiji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mMiji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79534611BDA499A00C1C93C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E79534661BDA499A00C1C93C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -312,7 +308,6 @@
 				E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */,
 				E7A9FE5A1C01354A00A5450A /* workoutParser.swift */,
 				E7637E671BEA2AFF00A04107 /* DevicesViewController.swift */,
-				E7637E6B1BF3765300A04107 /* CSCDeviceCell.swift */,
 			);
 			path = mMiji;
 			sourceTree = "<group>";
@@ -683,7 +678,6 @@
 				E7637E641BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */,
 				E729B3381BE0E9B80083D163 /* CSCDeviceData.swift in Sources */,
 				E79534621BDA499A00C1C93C /* AppDelegate.swift in Sources */,
-				E7637E6C1BF3765300A04107 /* CSCDeviceCell.swift in Sources */,
 				E7A9FE5B1C01354A00A5450A /* workoutParser.swift in Sources */,
 				E729B3361BE0E7BD0083D163 /* CSCDevice.swift in Sources */,
 			);
@@ -698,7 +692,6 @@
 				E7637E691BEA2AFF00A04107 /* DevicesViewController.swift in Sources */,
 				E79534771BDA499A00C1C93C /* mMijiTests.swift in Sources */,
 				E7637E651BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */,
-				E7637E6D1BF3765300A04107 /* CSCDeviceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,7 +704,6 @@
 				E7637E6A1BEA2AFF00A04107 /* DevicesViewController.swift in Sources */,
 				E79534821BDA499A00C1C93C /* mMijiUITests.swift in Sources */,
 				E7637E661BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */,
-				E7637E6E1BF3765300A04107 /* CSCDeviceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
