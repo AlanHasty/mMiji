@@ -63,8 +63,11 @@ class DevicesViewController: UIViewController,
         myCentralManager.connectPeripheral(peripheralArray[pairedRiderIndex], options: nil)
         printToMyTextView("Trying device: \(sensor.uid)\r")
         // Stop scanning if you are going to connect
-        let falseButton = UIButton()
-        scanForDevices(falseButton)
+        if scanningState
+        {
+            let falseButton = UIButton()
+            scanForDevices(falseButton)
+        }
     }
     
     override func viewDidLoad() {

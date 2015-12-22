@@ -158,7 +158,7 @@
                     <navigationItem key="navigationItem" id="68S-gI-71D" userLabel="Workouts">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="YPh-Vp-ZUi">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pf4-JE-nvi">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <rect key="frame" x="497" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Get Ready"/>
                                 <connections>
@@ -356,9 +356,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HWE-ms-f7c">
-                        <barButtonItem key="rightBarButtonItem" title="Back" id="s5B-fx-ETB">
+                        <barButtonItem key="rightBarButtonItem" title="Back" style="plain" id="3bI-aW-C6I">
                             <connections>
-                                <segue destination="oT8-Qx-XFj" kind="unwind" unwindAction="returnToWorkoutSelction:" id="TvG-Oa-Edq"/>
+                                <segue destination="oT8-Qx-XFj" kind="unwind" unwindAction="returnToWorkoutSelction:" id="hdH-3Q-KdN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

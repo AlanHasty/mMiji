@@ -25,10 +25,13 @@ class TrainingViewController: UIViewController {
     var tonightsWorkout = 999
     
     var runningTimer = NSTimer()
+    var dialTimer = NSTimer()
+    
     var wkoutTimers: Timers = Timers()
     
-    var timerSpeed: Double = 1.0 // Change this to 1.0 if you want proper time
-    var selectedRiderIndex: Int = 0
+    let timerSpeed: Double = 1.0 // Change this to 1.0 if you want proper time
+    let dialSpeed:  Double = 1.0 // Updates for the dial so that you can see it working before staring workout.
+
     var wkoutIndex = 0
     var hardwork: WorkoutPPP = WorkoutPPP()
     
@@ -58,11 +61,18 @@ class TrainingViewController: UIViewController {
     var curEffortStruct =  Effort(duration: 2.0, finishTime: 58.0, gear:"B17", desc:"Test", intervals: [])
     var nextEffortStruct = Effort(duration:4.00, finishTime: 62.0, gear: "S15",desc: "Spin doctor", intervals: [])
     
-    @IBAction func returnToWorkoutSelction(segue:UIStoryboardSegue) {
-        // This will get us back I think!
-    }
-  
+
+
     @IBOutlet weak var cadenceView: WMGaugeView!
+    
+    func updateDial()
+    {
+        if cscDevices.count > 0  && cscDevices[pairedRiderIndex].paired
+        {
+            let newVal = Float(cscDevices[pairedRiderIndex].wheelRevs)
+            cadenceView.setValue(newVal, animated: false)
+        }
+    }
     
     func manageTicks() {
         wkoutTimers.workoutTime += 1
@@ -76,11 +86,7 @@ class TrainingViewController: UIViewController {
             wkoutTimers.intervalTime = 0
         }
       
-        if cscDevices.count > 0  && cscDevices[pairedRiderIndex].paired
-        {
-            let newVal = Float(cscDevices[pairedRiderIndex].wheelRevs)
-            cadenceView.setValue(newVal, animated: false)
-        }
+
     }
     
     func intervalTime()
@@ -298,6 +304,8 @@ class TrainingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
        // Do any additional setup after loading the view.
         hardwork = WorkoutPPP(workoutSelection: tonightsWorkoutStr)
         cdOverlay = SFCountdownView(frame: self.view.frame)
@@ -307,23 +315,10 @@ class TrainingViewController: UIViewController {
         updateCurrentEfffortLine(wkoutIndex)
         updateNextEffortLine(wkoutIndex)
         updateEffortTimerText()
-        
-        var loopCount = 0
-        for rider in cscDevices
-        {
-            if (( rider.paired ) == true )
-            {
-                selectedRiderIndex = loopCount
-                break
-            }
-            loopCount += 1
-        }
-        
-
 
 
         //cadenceView.style = WMGaugeView.WMGaugeViewStyleFlatThin
-        cadenceView.setValue(10, animated: false)
+        cadenceView.setValue(0, animated: false)
         cadenceView.maxValue = 200.0
         cadenceView.scaleDivisions = 5
         cadenceView.scaleSubdivisions = 10
@@ -339,6 +334,8 @@ class TrainingViewController: UIViewController {
         cadenceView.scaleDivisionsLength = 0.07;
  
         
+        dialTimer = NSTimer.scheduledTimerWithTimeInterval(dialSpeed, target: self, selector: "updateDial",
+            userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {

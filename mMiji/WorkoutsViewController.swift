@@ -27,6 +27,11 @@ class WorkoutsViewController: UITableViewController {
         
     }
     
+    @IBAction func returnToWorkoutSelction(segue:UIStoryboardSegue) {
+        // This will get us back I think!
+        print("Returning to workout selection")
+    }
+    
     func listFilesFromDocumentsFolder()
     {
 
