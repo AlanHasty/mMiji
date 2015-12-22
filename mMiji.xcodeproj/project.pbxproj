@@ -16,6 +16,7 @@
 		E73D2BFB1C2770A300FEF6A9 /* CSCDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729B3351BE0E7BD0083D163 /* CSCDevice.swift */; };
 		E73D2BFC1C2770A800FEF6A9 /* SpeedAndCadence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702DC801C15B56700273EB8 /* SpeedAndCadence.swift */; };
 		E73D2BFD1C2770A800FEF6A9 /* SpeedAndCadence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E702DC801C15B56700273EB8 /* SpeedAndCadence.swift */; };
+		E74593381C28F7FD00471C90 /* CSCDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74593371C28F7FD00471C90 /* CSCDeviceCell.swift */; };
 		E7637E641BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */; };
 		E7637E651BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */; };
 		E7637E661BE8DAB000A04107 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */; };
@@ -170,6 +171,7 @@
 		E702DC801C15B56700273EB8 /* SpeedAndCadence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedAndCadence.swift; sourceTree = "<group>"; };
 		E729B3351BE0E7BD0083D163 /* CSCDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCDevice.swift; sourceTree = "<group>"; };
 		E729B3371BE0E9B80083D163 /* CSCDeviceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCDeviceData.swift; sourceTree = "<group>"; };
+		E74593371C28F7FD00471C90 /* CSCDeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSCDeviceCell.swift; sourceTree = "<group>"; };
 		E7637E631BE8DAB000A04107 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		E7637E671BEA2AFF00A04107 /* DevicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
 		E795345E1BDA499A00C1C93C /* mMiji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mMiji.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,6 +298,7 @@
 		E79534601BDA499A00C1C93C /* mMiji */ = {
 			isa = PBXGroup;
 			children = (
+				E74593371C28F7FD00471C90 /* CSCDeviceCell.swift */,
 				E702DC801C15B56700273EB8 /* SpeedAndCadence.swift */,
 				E7AF370A1C0A5B490024F218 /* TrainingViewController.swift */,
 				E79534611BDA499A00C1C93C /* AppDelegate.swift */,
@@ -672,6 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74593381C28F7FD00471C90 /* CSCDeviceCell.swift in Sources */,
 				E7AF370B1C0A5B490024F218 /* TrainingViewController.swift in Sources */,
 				E702DC811C15B56700273EB8 /* SpeedAndCadence.swift in Sources */,
 				E7637E681BEA2AFF00A04107 /* DevicesViewController.swift in Sources */,

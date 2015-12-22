@@ -27,7 +27,7 @@ class TrainingViewController: UIViewController {
     var runningTimer = NSTimer()
     var wkoutTimers: Timers = Timers()
     
-    var timerSpeed: Double = 1.0 // Change this to 1.0 if you want proper time
+    var timerSpeed: Double = 0.1 // Change this to 1.0 if you want proper time
     var selectedRiderIndex: Int = 0
     var wkoutIndex = 0
     var hardwork: WorkoutPPP = WorkoutPPP()
@@ -76,8 +76,11 @@ class TrainingViewController: UIViewController {
             wkoutTimers.intervalTime = 0
         }
       
-        let newVal = Float(cscDevices[pairedRiderIndex].wheelRevs)
-        cadenceView.setValue(newVal, animated: false)
+        if cscDevices.count > 0  && cscDevices[pairedRiderIndex].paired
+        {
+            let newVal = Float(cscDevices[pairedRiderIndex].wheelRevs)
+            cadenceView.setValue(newVal, animated: false)
+        }
     }
     
     func intervalTime()
