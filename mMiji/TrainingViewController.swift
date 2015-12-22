@@ -27,7 +27,7 @@ class TrainingViewController: UIViewController {
     var runningTimer = NSTimer()
     var wkoutTimers: Timers = Timers()
     
-    var timerSpeed: Double = 0.1 // Change this to 1.0 if you want proper time
+    var timerSpeed: Double = 1.0 // Change this to 1.0 if you want proper time
     var selectedRiderIndex: Int = 0
     var wkoutIndex = 0
     var hardwork: WorkoutPPP = WorkoutPPP()
