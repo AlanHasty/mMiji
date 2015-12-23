@@ -105,7 +105,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Connect"/>
                                 <connections>
-                                    <action selector="ConnectDevice:" destination="H9r-gS-A8x" eventType="touchUpInside" id="A05-Sy-2kt"/>
+                                    <action selector="connectDevice:" destination="H9r-gS-A8x" eventType="touchUpInside" id="u0q-uD-tL2"/>
                                 </connections>
                             </button>
                         </subviews>

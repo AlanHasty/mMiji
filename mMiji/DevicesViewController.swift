@@ -11,7 +11,7 @@ import MBProgressHUD
 import CoreBluetooth
 
 var cscDevices = [CSCDevice]()
-var pairedRiderIndex: Int = 0;
+var pairedRiderIndex: Int = 999;
 
 class DevicesViewController: UIViewController,
                              UITableViewDataSource,
@@ -58,7 +58,27 @@ class DevicesViewController: UIViewController,
     
     let cscCellID = "CSCDeivceCell"
     
-    @IBAction func ConnectDevice(sender: AnyObject) {
+    @IBAction func connectDevice(sender: AnyObject) {
+        if cscDevices.count == 0
+        {
+            // Show alert and return
+            let alertController = UIAlertController(title: "Available Devices", message: "No cadence devices present: Try scanning.", preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil ))
+            presentViewController(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        // Make sure a selection has been made
+        
+        if pairedRiderIndex == 999
+        {
+            // Show alert to make a device selection
+            let alertController = UIAlertController(title: "Device selection", message: "No cadence device selected", preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil ))
+            presentViewController(alertController, animated: true, completion: nil)
+            return
+        }
+        
         let sensor = cscDevices[pairedRiderIndex]
         myCentralManager.connectPeripheral(peripheralArray[pairedRiderIndex], options: nil)
         printToMyTextView("Trying device: \(sensor.uid)\r")
@@ -200,9 +220,6 @@ class DevicesViewController: UIViewController,
     
     func peripheral(peripheral: CBPeripheral, didDiscoverCharacteristicsForService service: CBService, error: NSError?) {
         
-        //var enableValue = 1
-        //let enablyBytes = NSData(bytes: &enableValue, length: sizeof(UInt8))
-        
         printToMyTextView("DidDiscoverCharacteristicsForService:  Service.UUID \(service.UUID)  UUIDString \(service.UUID.UUIDString)\r")
         printToMyTextView("Enabling sensors")
         
@@ -234,13 +251,6 @@ class DevicesViewController: UIViewController,
         
         printToMyTextView("  Read Char Property:Value: \(characteristic.properties):\(characteristic.value)\r")
         
-        //        var myData = NSData()
-        //        if let foo = characteristic.value {
-        //            myData = characteristic.value
-        //            printToMyTextView("MyData: \(myData)")
-        //        }
-        
-        //     return [WheelRev, WheelEvt, CrankRev, CrankEvt]
         
         //https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.csc_measurement.xml
         
