@@ -1,4 +1,7 @@
 PODS:
+  - Crashlytics (3.4.1):
+    - Fabric (~> 1.6.0)
+  - Fabric (1.6.1)
   - MBProgressHUD (0.9.1)
   - SFCountdownView (0.0.1)
   - SFGaugeView (0.0.7)
@@ -6,6 +9,8 @@ PODS:
   - WMGaugeView (0.0.3)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - MBProgressHUD (~> 0.9.1)
   - SFCountdownView
   - SFGaugeView
@@ -22,6 +27,8 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
+  Crashlytics: d1b00dd721c2d9acc61812325c27f8a98d32e494
+  Fabric: f14f384e6e8d3127b40972e7bb76450485ac85b0
   MBProgressHUD: 2a730b1083f7ef24254b5e524d09a85db08ecc5c
   SFCountdownView: 5668c8240de8b2a5725df4702a2722c69023f628
   SFGaugeView: ff70787515f5dbf54c26a62a2fec8a5e95d4aa35

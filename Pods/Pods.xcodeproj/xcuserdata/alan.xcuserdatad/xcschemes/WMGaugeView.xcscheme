@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3B27A3C143A544F8C4ACBAC0'
+               BlueprintIdentifier = '10F5EF8945BA7B2A2FA092D0'
                BlueprintName = 'WMGaugeView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'WMGaugeView.framework'>

@@ -7,41 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0452E22F5E07A826E665083EEC5555C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C21F09E6603FB3A422215D776D17F295 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0F6FCF15CC1F4F05C46539443FDA2AAB /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1CC696D6746F77284ACE828FC5BA6BA /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B0703CD56DB0723EE609655922FEF2B /* WMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D556A83412A23CDCA842C897666A5235 /* WMGaugeView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1E7623B9420C3E71FAE3287C0CECA040 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 580A938D943859B15D6EDF1DAEDB0656 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0452E22F5E07A826E665083EEC5555C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C19425E39DA241577EFD5064505FDE /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0F6FCF15CC1F4F05C46539443FDA2AAB /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 125F19C4719B78681B17FC7171427127 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B0703CD56DB0723EE609655922FEF2B /* WMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDD0344F99BF330469BFF5EA30123C /* WMGaugeView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1E7623B9420C3E71FAE3287C0CECA040 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BE986198E05E2E59CD9CFFF096A3ADE /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		215F70BE0FC027B83CB0EBCC659C7825 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F79ACD206D7284CF469DA6B24AFACE9 /* UIKit.framework */; };
-		2856663152F4DD44C985C47FF841B28B /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EA51867CC255671F1740BEAE942E4154 /* AppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39799DDF2D5C80C9792CD586D969E30E /* WMGaugeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5DFA1D30CF8489DF5B9D7DF01C79D3 /* WMGaugeView-dummy.m */; };
+		2856663152F4DD44C985C47FF841B28B /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4789E17A0EED156C26E15CDE6622BA41 /* AppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39799DDF2D5C80C9792CD586D969E30E /* WMGaugeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0FD2CEE15087C9109E4E58108A326F /* WMGaugeView-dummy.m */; };
 		40C42F3F5DD94F29414FB7BF431221AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B3C2F7A60189AA38D256A0120B8730 /* CoreGraphics.framework */; };
-		48CF8EDB56A2E66A5B23800D4FD64BBF /* SFGaugeView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA5E656953A510B3C6EAFC463E19AFD6 /* SFGaugeView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4DCF9DB9EC49AB8FA8E15D2048717DF2 /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A0457380EBB608C735B142B668AFAA /* ViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48CF8EDB56A2E66A5B23800D4FD64BBF /* SFGaugeView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FCB7DDBB21DB3CEE527AE6A986F2036 /* SFGaugeView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DCF9DB9EC49AB8FA8E15D2048717DF2 /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CDE6997549FCB84A7054E73D6E64DA5 /* ViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5025DF9ACCF897FD1653B1B78D5D28E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA9D6C62076D7840475E09238EED1E /* Foundation.framework */; };
-		55DBA4957A29A35EE824C27C4C7C7777 /* SFGaugeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E115304905B77EA7D02BC930ED206407 /* SFGaugeView-dummy.m */; };
+		55DBA4957A29A35EE824C27C4C7C7777 /* SFGaugeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8EA431935E1F2AD20EC7665A8B76BE /* SFGaugeView-dummy.m */; };
 		589663B930729F7B51FE506BC68BD073 /* Pods-mMiji-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 404001F7DB3146ED7E53C55649959046 /* Pods-mMiji-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E8E6FA6CDD3FB46947399A9DBA3AC83 /* SFGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1AAAFD9A27061E4AA064257A18D2C3 /* SFGaugeView.m */; };
-		61011FD391BA81357F13C7F6A3BE2323 /* SFCountdownView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AA9755D14E2BA6734F3031A28BAF7AA /* SFCountdownView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		640851897ED8B37C96F19205B6AEF618 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC6F402E78A969181D9DF14CC0C76116 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6ADBCF427165259DE5CCA13F26295076 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F20DF9A703EADB42973BCD76267FCEF /* main.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		71C44C2B108CA219A0C7DFE365FF23A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6F50C82E2FF6E98CF22A8EE21AD11 /* ViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5E8E6FA6CDD3FB46947399A9DBA3AC83 /* SFGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2433DBC826FEDB5B7DE3E34A0B2B46 /* SFGaugeView.m */; };
+		61011FD391BA81357F13C7F6A3BE2323 /* SFCountdownView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B195E0D45A2929753A72E88BB62C48B /* SFCountdownView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		640851897ED8B37C96F19205B6AEF618 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B5BFDCD3A2F059BFA27ECF1B5108A9 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6ADBCF427165259DE5CCA13F26295076 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2801F86FCE770775C37164AA76BDD01B /* main.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		71C44C2B108CA219A0C7DFE365FF23A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB11A3BB8B69BCB2144824EFF6C90539 /* ViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7223F2D78A55A3B6DF2F4C9373E140BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA9D6C62076D7840475E09238EED1E /* Foundation.framework */; };
-		7C0930AA288E3F18474E8B3F3F566016 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE5134029F06625F9A0DF6018A9AED /* SwiftyJSON-dummy.m */; };
+		7C0930AA288E3F18474E8B3F3F566016 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE3B761E0368965BA3708F0A6594FA0 /* SwiftyJSON-dummy.m */; };
 		801AFE7F228D91183082D7D86CCB9CEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA9D6C62076D7840475E09238EED1E /* Foundation.framework */; };
 		8065F80AC04276CA905E3E7C5BA9DF76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F79ACD206D7284CF469DA6B24AFACE9 /* UIKit.framework */; };
-		8957077C9FEEF368B474EAC89F4EBBE8 /* SFCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC0E9E903774E8291F73C7A2A4AC21 /* SFCountdownView.m */; };
-		9055849F6839BB65A04004BA0C602946 /* WMGaugeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E91D6F297E2528424A5CA56CED6EF7 /* WMGaugeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E17CC11959A1FE5566CE528047ACDC0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB10AA08A4EB38000F23E7061DEE065 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BB010EE04BA829E196554A00A951AA7C /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5C2A7A5F6023873A900173A7DFBF62 /* MBProgressHUD-dummy.m */; };
-		C24E15877F34E0C1E3FC9C990716A898 /* SFGaugeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EBBDBA66FC4458A1B9715A84C2A1A0E /* SFGaugeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8957077C9FEEF368B474EAC89F4EBBE8 /* SFCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4B4BC7940C1C95BC612A31B6379182 /* SFCountdownView.m */; };
+		9055849F6839BB65A04004BA0C602946 /* WMGaugeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE9A8EE4A8706186AC060AFADFA8705 /* WMGaugeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E17CC11959A1FE5566CE528047ACDC0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 278E1871338321FEA8C41052F33456B3 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BB010EE04BA829E196554A00A951AA7C /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0264A21DB7FEDFFF0D799E217A872642 /* MBProgressHUD-dummy.m */; };
+		C24E15877F34E0C1E3FC9C990716A898 /* SFGaugeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14999E7CB3595E3D37D2B05254103C8D /* SFGaugeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCFE091DC9339486E523BFFFC9590A1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA9D6C62076D7840475E09238EED1E /* Foundation.framework */; };
-		D27B865D89411228E14776F3F93F3729 /* SFCountdownView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C011731F4BE78D4706AA1B5A9129CC07 /* SFCountdownView-dummy.m */; };
+		D27B865D89411228E14776F3F93F3729 /* SFCountdownView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EC5C68A0D987CBC724E9A8AA49E518 /* SFCountdownView-dummy.m */; };
 		EDD8912E01FC617B2F34B2E34347B289 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA9D6C62076D7840475E09238EED1E /* Foundation.framework */; };
 		EE8AF579C241688ED67FD4FB475F3AC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F79ACD206D7284CF469DA6B24AFACE9 /* UIKit.framework */; };
 		EF2A30FFC44B66560317579663337533 /* Pods-mMiji-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E361AA3FA057CB04933165336F92FA9 /* Pods-mMiji-dummy.m */; };
-		F5D474D6D022ACF488DFD9E1A8985564 /* WMGaugeView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5359E6F0EA6894B8748A496583432825 /* WMGaugeView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F765267E03F4465CFA3997B094D4DAF6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431C2BD2173198F7F7E296A5792805F /* SwiftyJSON.swift */; };
-		F8938D440681083CE37165F3E881E97A /* SFCountdownView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 238F58AE9354DA8A55325D7A64D68B74 /* SFCountdownView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5D474D6D022ACF488DFD9E1A8985564 /* WMGaugeView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBC61BDC8626C719B85E33946B033A7 /* WMGaugeView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F765267E03F4465CFA3997B094D4DAF6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808440F5C6C411D6EA382A6A251A4D92 /* SwiftyJSON.swift */; };
+		F8938D440681083CE37165F3E881E97A /* SFCountdownView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91BC282FC70572EA3ADFA8D66BBD9FB8 /* SFCountdownView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF2E7085FAC2F171AA4E1871A12ABB7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA9D6C62076D7840475E09238EED1E /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,69 +84,71 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		043DA378B3E5572AF3483BEEC67C6855 /* WMGaugeView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WMGaugeView.xcconfig; sourceTree = "<group>"; };
-		0DBC0E9E903774E8291F73C7A2A4AC21 /* SFCountdownView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFCountdownView.m; path = SFCountdownView/SFCountdownView.m; sourceTree = "<group>"; };
+		0264A21DB7FEDFFF0D799E217A872642 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		084B818B23B033119DD8880955BED8AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1164FA912F717B29E81EA149A3EA4A2C /* Pods-mMiji-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mMiji-resources.sh"; sourceTree = "<group>"; };
+		125F19C4719B78681B17FC7171427127 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		14999E7CB3595E3D37D2B05254103C8D /* SFGaugeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFGaugeView.h; path = SFGaugeView/SFGaugeView.h; sourceTree = "<group>"; };
 		18E6954540CA9844578C83F45EF9744F /* SFGaugeView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFGaugeView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C5DFA1D30CF8489DF5B9D7DF01C79D3 /* WMGaugeView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WMGaugeView-dummy.m"; sourceTree = "<group>"; };
 		1E361AA3FA057CB04933165336F92FA9 /* Pods-mMiji-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mMiji-dummy.m"; sourceTree = "<group>"; };
-		22E91D6F297E2528424A5CA56CED6EF7 /* WMGaugeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMGaugeView.h; path = WMGaugeView/WMGaugeView.h; sourceTree = "<group>"; };
-		238F58AE9354DA8A55325D7A64D68B74 /* SFCountdownView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFCountdownView-umbrella.h"; sourceTree = "<group>"; };
+		20BACC838BD08A01946C29FE376C1836 /* SFCountdownView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SFCountdownView.modulemap; sourceTree = "<group>"; };
 		23B3C2F7A60189AA38D256A0120B8730 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		2920DC10E915D9F24C5B0CFA0452DDC2 /* SFGaugeView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SFGaugeView.xcconfig; sourceTree = "<group>"; };
-		2C00E1125A1A77C25A9856B2C48117B3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23C19425E39DA241577EFD5064505FDE /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WMGaugeView/AppDelegate.m; sourceTree = "<group>"; };
+		278E1871338321FEA8C41052F33456B3 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2801F86FCE770775C37164AA76BDD01B /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WMGaugeView/main.m; sourceTree = "<group>"; };
+		2B195E0D45A2929753A72E88BB62C48B /* SFCountdownView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFCountdownView.h; path = SFCountdownView/SFCountdownView.h; sourceTree = "<group>"; };
+		2DE158E861BFF3359ECB75EF31933D52 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F1A74A35519FFE5D4A27424DB59B335 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		404001F7DB3146ED7E53C55649959046 /* Pods-mMiji-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mMiji-umbrella.h"; sourceTree = "<group>"; };
-		4EBBDBA66FC4458A1B9715A84C2A1A0E /* SFGaugeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFGaugeView.h; path = SFGaugeView/SFGaugeView.h; sourceTree = "<group>"; };
-		51BB5C630607C7C01B6884616115E453 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		5359E6F0EA6894B8748A496583432825 /* WMGaugeView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WMGaugeView-umbrella.h"; sourceTree = "<group>"; };
-		5431C2BD2173198F7F7E296A5792805F /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		580A938D943859B15D6EDF1DAEDB0656 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		4789E17A0EED156C26E15CDE6622BA41 /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WMGaugeView/AppDelegate.h; sourceTree = "<group>"; };
+		48EC5C68A0D987CBC724E9A8AA49E518 /* SFCountdownView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SFCountdownView-dummy.m"; sourceTree = "<group>"; };
+		4AAE6A6442CF982AEC80DC2D4B5608ED /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		4C8EA431935E1F2AD20EC7665A8B76BE /* SFGaugeView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SFGaugeView-dummy.m"; sourceTree = "<group>"; };
+		4CE9A8EE4A8706186AC060AFADFA8705 /* WMGaugeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMGaugeView.h; path = WMGaugeView/WMGaugeView.h; sourceTree = "<group>"; };
+		53F3E2796E3974B032341C9F854194AD /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		5B0DD20174813BEC433ABFC6BB4E5D2E /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B110A274F22D4498FC1DB2817047ED6 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
-		5B1AAAFD9A27061E4AA064257A18D2C3 /* SFGaugeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFGaugeView.m; path = SFGaugeView/SFGaugeView.m; sourceTree = "<group>"; };
 		5C97EA7251428D316920857873B578D6 /* SFCountdownView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFCountdownView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F23B32785948F2432613FBEBC4403D2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		5FCB7DDBB21DB3CEE527AE6A986F2036 /* SFGaugeView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFGaugeView-umbrella.h"; sourceTree = "<group>"; };
+		61E62AEEEC26716D5E9B64969E443334 /* SFCountdownView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SFCountdownView.xcconfig; sourceTree = "<group>"; };
 		62B8C5044577D8C286AFF179C1A4D8C4 /* Pods-mMiji-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mMiji-acknowledgements.markdown"; sourceTree = "<group>"; };
+		63F3FF158A4162892CDF7E5138FA2677 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6703BD73068BAC8D3FA78D267A66134D /* WMGaugeView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WMGaugeView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D830BB107B88483CF9A4F4A656144F /* Pods-mMiji-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mMiji-frameworks.sh"; sourceTree = "<group>"; };
-		6BEFFD7B86947DB5FDBD21BCCAC13D06 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E170F7377C6714D4CA68D36ED869145 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7191594D9061F738BFF20F8890F134F7 /* SFGaugeView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFGaugeView-prefix.pch"; sourceTree = "<group>"; };
-		774FDA097C572CBFF0B079B4A2E1EA4D /* WMGaugeView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WMGaugeView-prefix.pch"; sourceTree = "<group>"; };
-		7DA6F50C82E2FF6E98CF22A8EE21AD11 /* ViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = WMGaugeView/ViewController.m; sourceTree = "<group>"; };
-		7F20DF9A703EADB42973BCD76267FCEF /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WMGaugeView/main.m; sourceTree = "<group>"; };
+		6BE986198E05E2E59CD9CFFF096A3ADE /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6CED76508317B6DF25D9DA9F95640487 /* WMGaugeView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WMGaugeView.xcconfig; sourceTree = "<group>"; };
+		703F2FB6AFEEB23D3BAAE4FA2836C291 /* SFGaugeView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFGaugeView-prefix.pch"; sourceTree = "<group>"; };
+		7C0FD2CEE15087C9109E4E58108A326F /* WMGaugeView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WMGaugeView-dummy.m"; sourceTree = "<group>"; };
 		7F79ACD206D7284CF469DA6B24AFACE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		8AA9755D14E2BA6734F3031A28BAF7AA /* SFCountdownView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFCountdownView.h; path = SFCountdownView/SFCountdownView.h; sourceTree = "<group>"; };
-		915E6274095B491DE6C97554D9A2F399 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9351F186081E5105F0868C0F3327B28A /* WMGaugeView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WMGaugeView.modulemap; sourceTree = "<group>"; };
+		808440F5C6C411D6EA382A6A251A4D92 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		824240DDBCF41BEAC727D88F79F3D698 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		84A1889FE737BEA52FEEE9BDCB7550B1 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		881E3C004B6E7A69F60E0C763F25067A /* SFGaugeView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SFGaugeView.xcconfig; sourceTree = "<group>"; };
+		8F07A3B7B477EA192E1E935ECA53CEDA /* SFGaugeView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SFGaugeView.modulemap; sourceTree = "<group>"; };
+		91BC282FC70572EA3ADFA8D66BBD9FB8 /* SFCountdownView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFCountdownView-umbrella.h"; sourceTree = "<group>"; };
+		954CE2A592C2F96115A7C01DC409A4B3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95FA9D6C62076D7840475E09238EED1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		9699F9A42F53A1CAFEAF35EE75F7D7C6 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		994740C980547F508AC08EF5BADE6FDD /* SFGaugeView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SFGaugeView.modulemap; sourceTree = "<group>"; };
 		9CCBBECFDD7AC2B77EB8D6761517411D /* Pods-mMiji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mMiji.release.xcconfig"; sourceTree = "<group>"; };
-		9EAE5134029F06625F9A0DF6018A9AED /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		AC12459357B57741D0EF0360AE1186BC /* SFCountdownView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFCountdownView-prefix.pch"; sourceTree = "<group>"; };
+		9CDE6997549FCB84A7054E73D6E64DA5 /* ViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = WMGaugeView/ViewController.h; sourceTree = "<group>"; };
+		A5BDD0344F99BF330469BFF5EA30123C /* WMGaugeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WMGaugeView.m; path = WMGaugeView/WMGaugeView.m; sourceTree = "<group>"; };
+		A8B5BFDCD3A2F059BFA27ECF1B5108A9 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		AE322FC38CAEC61EFFD2BD05DE1C21C9 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		B01F5F3EFCCA2D7A01C0FCABC490BC55 /* Pods-mMiji-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mMiji-acknowledgements.plist"; sourceTree = "<group>"; };
-		BA5E656953A510B3C6EAFC463E19AFD6 /* SFGaugeView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFGaugeView-umbrella.h"; sourceTree = "<group>"; };
+		B15A08CC24E51BAD47AB45DAFD06231C /* WMGaugeView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WMGaugeView-prefix.pch"; sourceTree = "<group>"; };
+		B72E27E2638AB1AEDB102F75CA0EB147 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BF6F93C679C8041A6E703C61DE4541B3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C011731F4BE78D4706AA1B5A9129CC07 /* SFCountdownView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SFCountdownView-dummy.m"; sourceTree = "<group>"; };
-		C21F09E6603FB3A422215D776D17F295 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WMGaugeView/AppDelegate.m; sourceTree = "<group>"; };
+		BAE3B761E0368965BA3708F0A6594FA0 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		BD93820D938A0DBABC533A42FC272144 /* SFCountdownView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFCountdownView-prefix.pch"; sourceTree = "<group>"; };
 		C5D7BBC122582867930E4F2E1A1A63DC /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7BE719D573D23BD25FB5065A5F054AB /* Pods-mMiji.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-mMiji.modulemap"; sourceTree = "<group>"; };
-		CC5C2A7A5F6023873A900173A7DFBF62 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		CC6F402E78A969181D9DF14CC0C76116 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		CEB10AA08A4EB38000F23E7061DEE065 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		D2AFE7B6239565EFBFB3D7705FA60563 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		D556A83412A23CDCA842C897666A5235 /* WMGaugeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WMGaugeView.m; path = WMGaugeView/WMGaugeView.m; sourceTree = "<group>"; };
-		D8A0457380EBB608C735B142B668AFAA /* ViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = WMGaugeView/ViewController.h; sourceTree = "<group>"; };
-		D9D6A0ADD034BEAFB276E539D3D4BF16 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		DBB7E8029551F4451BDBFD1B5645E93C /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		DD81E0EE8AC3D59637B4DF4F42BA6E19 /* SFCountdownView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SFCountdownView.xcconfig; sourceTree = "<group>"; };
+		CF4B4BC7940C1C95BC612A31B6379182 /* SFCountdownView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFCountdownView.m; path = SFCountdownView/SFCountdownView.m; sourceTree = "<group>"; };
+		DB11A3BB8B69BCB2144824EFF6C90539 /* ViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = WMGaugeView/ViewController.m; sourceTree = "<group>"; };
+		DDBC61BDC8626C719B85E33946B033A7 /* WMGaugeView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WMGaugeView-umbrella.h"; sourceTree = "<group>"; };
 		DFBE9E19441CB378BDF833424EF7A949 /* Pods_mMiji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mMiji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E115304905B77EA7D02BC930ED206407 /* SFGaugeView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SFGaugeView-dummy.m"; sourceTree = "<group>"; };
 		E146D12091115D084294C34C00C2624E /* Pods-mMiji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mMiji.debug.xcconfig"; sourceTree = "<group>"; };
-		EA51867CC255671F1740BEAE942E4154 /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WMGaugeView/AppDelegate.h; sourceTree = "<group>"; };
-		F1CC696D6746F77284ACE828FC5BA6BA /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		F1D2E4C371D1D81EC016FB8F8AAF0ACA /* SFCountdownView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SFCountdownView.modulemap; sourceTree = "<group>"; };
+		E8F391718C22F94FC0E8F1F64D6842CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE2433DBC826FEDB5B7DE3E34A0B2B46 /* SFGaugeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFGaugeView.m; path = SFGaugeView/SFGaugeView.m; sourceTree = "<group>"; };
+		F811C4A7B3967F5F6ED4AC309586B387 /* WMGaugeView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WMGaugeView.modulemap; sourceTree = "<group>"; };
 		FF23D424956CCE69991F7EE7D6B74D29 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +208,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CD993758037689795F0D8E289DE5AEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F3E2796E3974B032341C9F854194AD /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,67 +224,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1726D7E39C64C7AA2A08719D91101629 /* Support Files */ = {
+		1916EC39F8F5FE998BE2220654252A62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				915E6274095B491DE6C97554D9A2F399 /* Info.plist */,
-				9351F186081E5105F0868C0F3327B28A /* WMGaugeView.modulemap */,
-				043DA378B3E5572AF3483BEEC67C6855 /* WMGaugeView.xcconfig */,
-				1C5DFA1D30CF8489DF5B9D7DF01C79D3 /* WMGaugeView-dummy.m */,
-				774FDA097C572CBFF0B079B4A2E1EA4D /* WMGaugeView-prefix.pch */,
-				5359E6F0EA6894B8748A496583432825 /* WMGaugeView-umbrella.h */,
+				5F23B32785948F2432613FBEBC4403D2 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		279AFDD736F0E2D3EDE01ACC8252F55C /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6BE986198E05E2E59CD9CFFF096A3ADE /* MBProgressHUD.h */,
+				278E1871338321FEA8C41052F33456B3 /* MBProgressHUD.m */,
+				2F43D431A2949A641EA47EEADE44C82E /* Support Files */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		2F43D431A2949A641EA47EEADE44C82E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				084B818B23B033119DD8880955BED8AF /* Info.plist */,
+				824240DDBCF41BEAC727D88F79F3D698 /* MBProgressHUD.modulemap */,
+				84A1889FE737BEA52FEEE9BDCB7550B1 /* MBProgressHUD.xcconfig */,
+				0264A21DB7FEDFFF0D799E217A872642 /* MBProgressHUD-dummy.m */,
+				2F1A74A35519FFE5D4A27424DB59B335 /* MBProgressHUD-prefix.pch */,
+				125F19C4719B78681B17FC7171427127 /* MBProgressHUD-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/WMGaugeView";
+			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
-		289949783E9D37F65D1E12B3C53147D3 /* Support Files */ = {
+		424A5354AC9ABA096D529B88E3315F5D /* SFCountdownView */ = {
 			isa = PBXGroup;
 			children = (
-				6E170F7377C6714D4CA68D36ED869145 /* Info.plist */,
-				F1D2E4C371D1D81EC016FB8F8AAF0ACA /* SFCountdownView.modulemap */,
-				DD81E0EE8AC3D59637B4DF4F42BA6E19 /* SFCountdownView.xcconfig */,
-				C011731F4BE78D4706AA1B5A9129CC07 /* SFCountdownView-dummy.m */,
-				AC12459357B57741D0EF0360AE1186BC /* SFCountdownView-prefix.pch */,
-				238F58AE9354DA8A55325D7A64D68B74 /* SFCountdownView-umbrella.h */,
+				2B195E0D45A2929753A72E88BB62C48B /* SFCountdownView.h */,
+				CF4B4BC7940C1C95BC612A31B6379182 /* SFCountdownView.m */,
+				CF8501506DCA52C91349C57BCAC266C4 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SFCountdownView";
-			sourceTree = "<group>";
-		};
-		2B3F99CBEE3A0E6F71FE78DD79ECF207 /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				5431C2BD2173198F7F7E296A5792805F /* SwiftyJSON.swift */,
-				CD04697405BB1B9BEE5D11B547A29989 /* Support Files */,
-			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
-		3325459F9D2068ADA4A592EB15284FA4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BF6F93C679C8041A6E703C61DE4541B3 /* Info.plist */,
-				994740C980547F508AC08EF5BADE6FDD /* SFGaugeView.modulemap */,
-				2920DC10E915D9F24C5B0CFA0452DDC2 /* SFGaugeView.xcconfig */,
-				E115304905B77EA7D02BC930ED206407 /* SFGaugeView-dummy.m */,
-				7191594D9061F738BFF20F8890F134F7 /* SFGaugeView-prefix.pch */,
-				BA5E656953A510B3C6EAFC463E19AFD6 /* SFGaugeView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SFGaugeView";
-			sourceTree = "<group>";
-		};
-		458BA21A7B60550F82582177FA4F2C8E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				73D1630AF8B2D4AE17EEBC6AE7439647 /* MBProgressHUD */,
-				60AC43923C2076A521FD5BD7E8214F6A /* SFCountdownView */,
-				BECC93E410FEEEC0B4F8290001922DB6 /* SFGaugeView */,
-				2B3F99CBEE3A0E6F71FE78DD79ECF207 /* SwiftyJSON */,
-				8A207DC5DC3491FB0BF89BBAEB242A8F /* WMGaugeView */,
-			);
-			name = Pods;
+			path = SFCountdownView;
 			sourceTree = "<group>";
 		};
 		5297618568A445D7081AEBE0DBE0B316 /* Targets Support Files */ = {
@@ -285,24 +274,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		60AC43923C2076A521FD5BD7E8214F6A /* SFCountdownView */ = {
+		7C0E1680155479A485AC1470ED27847A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8AA9755D14E2BA6734F3031A28BAF7AA /* SFCountdownView.h */,
-				0DBC0E9E903774E8291F73C7A2A4AC21 /* SFCountdownView.m */,
-				289949783E9D37F65D1E12B3C53147D3 /* Support Files */,
+				2DE158E861BFF3359ECB75EF31933D52 /* Info.plist */,
+				8F07A3B7B477EA192E1E935ECA53CEDA /* SFGaugeView.modulemap */,
+				881E3C004B6E7A69F60E0C763F25067A /* SFGaugeView.xcconfig */,
+				4C8EA431935E1F2AD20EC7665A8B76BE /* SFGaugeView-dummy.m */,
+				703F2FB6AFEEB23D3BAAE4FA2836C291 /* SFGaugeView-prefix.pch */,
+				5FCB7DDBB21DB3CEE527AE6A986F2036 /* SFGaugeView-umbrella.h */,
 			);
-			path = SFCountdownView;
-			sourceTree = "<group>";
-		};
-		73D1630AF8B2D4AE17EEBC6AE7439647 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				580A938D943859B15D6EDF1DAEDB0656 /* MBProgressHUD.h */,
-				CEB10AA08A4EB38000F23E7061DEE065 /* MBProgressHUD.m */,
-				C79785443C25E791655FA34AD12E93E6 /* Support Files */,
-			);
-			path = MBProgressHUD;
+			name = "Support Files";
+			path = "../Target Support Files/SFGaugeView";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -310,23 +293,37 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				458BA21A7B60550F82582177FA4F2C8E /* Pods */,
+				D0956332F013AC005AD2129A4A24858A /* Pods */,
 				E50307C638995EDFCA84E6A56BAF23A2 /* Products */,
 				5297618568A445D7081AEBE0DBE0B316 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8A207DC5DC3491FB0BF89BBAEB242A8F /* WMGaugeView */ = {
+		7F22791FD26FBA132A632F136A8967E7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA51867CC255671F1740BEAE942E4154 /* AppDelegate.h */,
-				C21F09E6603FB3A422215D776D17F295 /* AppDelegate.m */,
-				7F20DF9A703EADB42973BCD76267FCEF /* main.m */,
-				D8A0457380EBB608C735B142B668AFAA /* ViewController.h */,
-				7DA6F50C82E2FF6E98CF22A8EE21AD11 /* ViewController.m */,
-				22E91D6F297E2528424A5CA56CED6EF7 /* WMGaugeView.h */,
-				D556A83412A23CDCA842C897666A5235 /* WMGaugeView.m */,
-				1726D7E39C64C7AA2A08719D91101629 /* Support Files */,
+				63F3FF158A4162892CDF7E5138FA2677 /* Info.plist */,
+				F811C4A7B3967F5F6ED4AC309586B387 /* WMGaugeView.modulemap */,
+				6CED76508317B6DF25D9DA9F95640487 /* WMGaugeView.xcconfig */,
+				7C0FD2CEE15087C9109E4E58108A326F /* WMGaugeView-dummy.m */,
+				B15A08CC24E51BAD47AB45DAFD06231C /* WMGaugeView-prefix.pch */,
+				DDBC61BDC8626C719B85E33946B033A7 /* WMGaugeView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/WMGaugeView";
+			sourceTree = "<group>";
+		};
+		A11F747D8F637DD4047B9FA510C23FAB /* WMGaugeView */ = {
+			isa = PBXGroup;
+			children = (
+				4789E17A0EED156C26E15CDE6622BA41 /* AppDelegate.h */,
+				23C19425E39DA241577EFD5064505FDE /* AppDelegate.m */,
+				2801F86FCE770775C37164AA76BDD01B /* main.m */,
+				9CDE6997549FCB84A7054E73D6E64DA5 /* ViewController.h */,
+				DB11A3BB8B69BCB2144824EFF6C90539 /* ViewController.m */,
+				4CE9A8EE4A8706186AC060AFADFA8705 /* WMGaugeView.h */,
+				A5BDD0344F99BF330469BFF5EA30123C /* WMGaugeView.m */,
+				7F22791FD26FBA132A632F136A8967E7 /* Support Files */,
 			);
 			path = WMGaugeView;
 			sourceTree = "<group>";
@@ -349,42 +346,48 @@
 			path = "Target Support Files/Pods-mMiji";
 			sourceTree = "<group>";
 		};
-		BECC93E410FEEEC0B4F8290001922DB6 /* SFGaugeView */ = {
+		CA8231BC9DAFBAE5E4C43C0B73A7F8DE /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				4EBBDBA66FC4458A1B9715A84C2A1A0E /* SFGaugeView.h */,
-				5B1AAAFD9A27061E4AA064257A18D2C3 /* SFGaugeView.m */,
-				3325459F9D2068ADA4A592EB15284FA4 /* Support Files */,
+				1916EC39F8F5FE998BE2220654252A62 /* Frameworks */,
 			);
-			path = SFGaugeView;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
-		C79785443C25E791655FA34AD12E93E6 /* Support Files */ = {
+		CE6E13882699F6E1659C0EA74489CADD /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				6BEFFD7B86947DB5FDBD21BCCAC13D06 /* Info.plist */,
-				5B110A274F22D4498FC1DB2817047ED6 /* MBProgressHUD.modulemap */,
-				D2AFE7B6239565EFBFB3D7705FA60563 /* MBProgressHUD.xcconfig */,
-				CC5C2A7A5F6023873A900173A7DFBF62 /* MBProgressHUD-dummy.m */,
-				DBB7E8029551F4451BDBFD1B5645E93C /* MBProgressHUD-prefix.pch */,
-				F1CC696D6746F77284ACE828FC5BA6BA /* MBProgressHUD-umbrella.h */,
+				0CD993758037689795F0D8E289DE5AEC /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MBProgressHUD";
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
-		CD04697405BB1B9BEE5D11B547A29989 /* Support Files */ = {
+		CF8501506DCA52C91349C57BCAC266C4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C00E1125A1A77C25A9856B2C48117B3 /* Info.plist */,
-				51BB5C630607C7C01B6884616115E453 /* SwiftyJSON.modulemap */,
-				D9D6A0ADD034BEAFB276E539D3D4BF16 /* SwiftyJSON.xcconfig */,
-				9EAE5134029F06625F9A0DF6018A9AED /* SwiftyJSON-dummy.m */,
-				9699F9A42F53A1CAFEAF35EE75F7D7C6 /* SwiftyJSON-prefix.pch */,
-				CC6F402E78A969181D9DF14CC0C76116 /* SwiftyJSON-umbrella.h */,
+				E8F391718C22F94FC0E8F1F64D6842CE /* Info.plist */,
+				20BACC838BD08A01946C29FE376C1836 /* SFCountdownView.modulemap */,
+				61E62AEEEC26716D5E9B64969E443334 /* SFCountdownView.xcconfig */,
+				48EC5C68A0D987CBC724E9A8AA49E518 /* SFCountdownView-dummy.m */,
+				BD93820D938A0DBABC533A42FC272144 /* SFCountdownView-prefix.pch */,
+				91BC282FC70572EA3ADFA8D66BBD9FB8 /* SFCountdownView-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
+			path = "../Target Support Files/SFCountdownView";
+			sourceTree = "<group>";
+		};
+		D0956332F013AC005AD2129A4A24858A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E13882699F6E1659C0EA74489CADD /* Crashlytics */,
+				CA8231BC9DAFBAE5E4C43C0B73A7F8DE /* Fabric */,
+				279AFDD736F0E2D3EDE01ACC8252F55C /* MBProgressHUD */,
+				424A5354AC9ABA096D529B88E3315F5D /* SFCountdownView */,
+				E93337EDAC6299ADA8BA4DF9DCF6B698 /* SFGaugeView */,
+				F1DF4B05FB8C252C3AF63CCDF34BD2DA /* SwiftyJSON */,
+				A11F747D8F637DD4047B9FA510C23FAB /* WMGaugeView */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		E35B3E289DB984DA75A774080D293670 /* iOS */ = {
@@ -408,6 +411,39 @@
 				6703BD73068BAC8D3FA78D267A66134D /* WMGaugeView.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E93337EDAC6299ADA8BA4DF9DCF6B698 /* SFGaugeView */ = {
+			isa = PBXGroup;
+			children = (
+				14999E7CB3595E3D37D2B05254103C8D /* SFGaugeView.h */,
+				EE2433DBC826FEDB5B7DE3E34A0B2B46 /* SFGaugeView.m */,
+				7C0E1680155479A485AC1470ED27847A /* Support Files */,
+			);
+			path = SFGaugeView;
+			sourceTree = "<group>";
+		};
+		E978DD159872C190E8AF3FD80241DD5A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				954CE2A592C2F96115A7C01DC409A4B3 /* Info.plist */,
+				4AAE6A6442CF982AEC80DC2D4B5608ED /* SwiftyJSON.modulemap */,
+				B72E27E2638AB1AEDB102F75CA0EB147 /* SwiftyJSON.xcconfig */,
+				BAE3B761E0368965BA3708F0A6594FA0 /* SwiftyJSON-dummy.m */,
+				AE322FC38CAEC61EFFD2BD05DE1C21C9 /* SwiftyJSON-prefix.pch */,
+				A8B5BFDCD3A2F059BFA27ECF1B5108A9 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		F1DF4B05FB8C252C3AF63CCDF34BD2DA /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				808440F5C6C411D6EA382A6A251A4D92 /* SwiftyJSON.swift */,
+				E978DD159872C190E8AF3FD80241DD5A /* Support Files */,
+			);
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -703,7 +739,7 @@
 /* Begin XCBuildConfiguration section */
 		2064924B3A5772F6439C88D8543E34C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD81E0EE8AC3D59637B4DF4F42BA6E19 /* SFCountdownView.xcconfig */;
+			baseConfigurationReference = 61E62AEEEC26716D5E9B64969E443334 /* SFCountdownView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -730,7 +766,7 @@
 		};
 		24A2B739A4ABA06299BE315F6728FACA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 043DA378B3E5572AF3483BEEC67C6855 /* WMGaugeView.xcconfig */;
+			baseConfigurationReference = 6CED76508317B6DF25D9DA9F95640487 /* WMGaugeView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -788,7 +824,7 @@
 		};
 		406D7B8D77A04493D23CAA8A0D2BDD7A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2AFE7B6239565EFBFB3D7705FA60563 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 84A1889FE737BEA52FEEE9BDCB7550B1 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -815,7 +851,7 @@
 		};
 		5314BAF375456B4E61801766C4CA7133 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 043DA378B3E5572AF3483BEEC67C6855 /* WMGaugeView.xcconfig */;
+			baseConfigurationReference = 6CED76508317B6DF25D9DA9F95640487 /* WMGaugeView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -881,7 +917,7 @@
 		};
 		6FA0FDBD164E353AC5BB541885D5B462 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD81E0EE8AC3D59637B4DF4F42BA6E19 /* SFCountdownView.xcconfig */;
+			baseConfigurationReference = 61E62AEEEC26716D5E9B64969E443334 /* SFCountdownView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -942,7 +978,7 @@
 		};
 		8007FB0B21974DFF784DEF47AEB1914F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2920DC10E915D9F24C5B0CFA0452DDC2 /* SFGaugeView.xcconfig */;
+			baseConfigurationReference = 881E3C004B6E7A69F60E0C763F25067A /* SFGaugeView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -969,7 +1005,7 @@
 		};
 		A8C12E4AF0E2DCA090C9471EDE7B8D03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9D6A0ADD034BEAFB276E539D3D4BF16 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = B72E27E2638AB1AEDB102F75CA0EB147 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -996,7 +1032,7 @@
 		};
 		C0A7C2C78CD05670C18EB14595D24EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2AFE7B6239565EFBFB3D7705FA60563 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 84A1889FE737BEA52FEEE9BDCB7550B1 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1023,7 +1059,7 @@
 		};
 		C0B58333AC33C059958573DB8E577F01 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2920DC10E915D9F24C5B0CFA0452DDC2 /* SFGaugeView.xcconfig */;
+			baseConfigurationReference = 881E3C004B6E7A69F60E0C763F25067A /* SFGaugeView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1050,7 +1086,7 @@
 		};
 		D74789F1A68D281085522B9266447CA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9D6A0ADD034BEAFB276E539D3D4BF16 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = B72E27E2638AB1AEDB102F75CA0EB147 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

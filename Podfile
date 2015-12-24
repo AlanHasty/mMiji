@@ -9,6 +9,8 @@ target 'mMiji' do
    pod 'SFGaugeView'
    pod 'SFCountdownView'
    pod 'WMGaugeView'
+   pod 'Fabric'
+   pod 'Crashlytics'
 end
 
 target 'mMijiTests' do

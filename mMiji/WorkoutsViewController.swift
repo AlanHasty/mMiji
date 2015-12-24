@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 class WorkoutsViewController: UITableViewController {
 
@@ -115,6 +116,7 @@ class WorkoutsViewController: UITableViewController {
 
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         
+        
         if identifier == "trainingSheet" {
             
             if tonightsWorkout == 999 {
@@ -125,6 +127,8 @@ class WorkoutsViewController: UITableViewController {
                 
                 return false
             }
+            
+            
             return true
         }
         return false

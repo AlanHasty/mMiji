@@ -59,6 +59,7 @@ class DevicesViewController: UIViewController,
     let cscCellID = "CSCDeivceCell"
     
     @IBAction func connectDevice(sender: AnyObject) {
+        
         if cscDevices.count == 0
         {
             // Show alert and return
