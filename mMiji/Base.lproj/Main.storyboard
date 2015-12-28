@@ -407,7 +407,7 @@
         <scene sceneID="hlW-VK-Unf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ygu-ay-nMV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workouts" image="5Stars" id="MD0-fp-JrZ"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="Gestures" id="MD0-fp-JrZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fY9-XX-8H3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -422,11 +422,11 @@
             </objects>
             <point key="canvasLocation" x="422" y="471"/>
         </scene>
-        <!--Devices-->
+        <!--Cadence Devs-->
         <scene sceneID="iyu-Tj-cLF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Amp-o3-WOi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Devices" image="Gestures" id="5Es-L4-yvM"/>
+                    <tabBarItem key="tabBarItem" title="Cadence Devs" image="CSCDevices" id="5Es-L4-yvM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Idy-yd-mkg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -461,7 +461,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="5Stars" width="81" height="15"/>
+        <image name="CSCDevices" width="30" height="30"/>
         <image name="Gestures" width="30" height="30"/>
         <image name="cyclist" width="60" height="60"/>
     </resources>
