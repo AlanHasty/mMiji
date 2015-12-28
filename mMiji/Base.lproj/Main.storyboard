@@ -422,11 +422,11 @@
             </objects>
             <point key="canvasLocation" x="422" y="471"/>
         </scene>
-        <!--Cadence Devs-->
+        <!--Cadence Devices-->
         <scene sceneID="iyu-Tj-cLF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Amp-o3-WOi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cadence Devs" image="CSCDevices" id="5Es-L4-yvM"/>
+                    <tabBarItem key="tabBarItem" title="Cadence Devices" image="CSCDevices" id="5Es-L4-yvM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Idy-yd-mkg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
